@@ -149,5 +149,7 @@ colorscheme OceanicNext
 
 map <C-S-j> :w !python3<CR>
 
-" from practical vim
-set nocompatible
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
