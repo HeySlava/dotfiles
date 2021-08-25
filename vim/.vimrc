@@ -128,7 +128,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 vnoremap <leader>p "_dP
-nnoremap <leader>p :FZF ~<CR>
+nnoremap <leader>p :Files! ~<CR>
 
 " undo break points
 inoremap , ,<c-g>u
@@ -153,3 +153,4 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
+
