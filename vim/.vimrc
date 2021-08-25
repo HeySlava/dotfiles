@@ -116,6 +116,8 @@ set fileencodings=utf8,cp1251
 set clipboard=unnamedplus
 set ruler
 
+" let g:rooter_user_lcd = 1
+" let g:rooter_manual_only = 1
 set autochdir
 
 set hidden
@@ -128,7 +130,9 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 vnoremap <leader>p "_dP
-nnoremap <leader>p :FZF ~<CR>
+nnoremap <leader>p :Files! ~/parsing/<CR>
+" nnoremap <leader>p :FZF ~<CR>
+nnoremap <leader>ps :Rg ~/parsing<CR>
 
 " undo break points
 inoremap , ,<c-g>u
@@ -149,5 +153,5 @@ colorscheme OceanicNext
 
 map <C-S-j> :w !python3<CR>
 
-" from practical vim
-set nocompatible
+
+
