@@ -130,9 +130,13 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 vnoremap <leader>p "_dP
+<<<<<<< HEAD
 nnoremap <leader>p :Files! ~/parsing/<CR>
 " nnoremap <leader>p :FZF ~<CR>
 nnoremap <leader>ps :Rg ~/parsing<CR>
+=======
+nnoremap <leader>p :Files! ~<CR>
+>>>>>>> 02001991642d2a9399c6be26e2bbcd11bbcb1d8f
 
 " undo break points
 inoremap , ,<c-g>u
@@ -153,5 +157,12 @@ colorscheme OceanicNext
 
 map <C-S-j> :w !python3<CR>
 
+<<<<<<< HEAD
 
+=======
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+>>>>>>> 02001991642d2a9399c6be26e2bbcd11bbcb1d8f
 
