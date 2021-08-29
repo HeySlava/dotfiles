@@ -89,7 +89,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 " В .py файлах включаем умные отступы после ключевых слов
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-" syntax on "Включить подсветку синтаксиса
+syntax off "Включить подсветку синтаксиса
 
 " set nu "Включаем нумерацию строк
 set mousehide "Спрятать курсор мыши когда набираем текст
@@ -142,8 +142,8 @@ inoremap ) )<c-g>u
 inoremap [ [<c-g>u
 inoremap ] ]<c-g>u
 
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
+nmap <leader>gf :diffget //3<CR>
+nmap <leader>gj :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
 set guifont=Monaco:h18
@@ -155,3 +155,13 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
+
+
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe' " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
