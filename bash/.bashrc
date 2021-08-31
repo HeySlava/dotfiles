@@ -117,5 +117,11 @@ if ! shopt -oq posix; then
 fi
 
 # my server bash_aliases
-alias server="ssh root@185.241.55.82"
+alias sv=" ssh root@185.241.55.82"
 alias ll="ls -alF"
+alias v="vim"
+alias pt="python3"
+
+
+
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
