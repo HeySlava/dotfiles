@@ -129,8 +129,10 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 vnoremap <leader>p "_dP
-nnoremap <leader>p :Files! ~/parsing/<CR>
+nnoremap <leader>p :Files! ~<CR>
 
 " undo break points
 inoremap , ,<c-g>u
@@ -156,12 +158,3 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
-
-" WSL yank support
-let s:clip = '/mnt/c/Windows/System32/clip.exe' " change this path according to your mount point
-if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
-endif

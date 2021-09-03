@@ -116,12 +116,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ $USER == "slava" ]
+then 
+    xmodmap ~/dotfiles/bash/.Xmodmap
+fi
+
 # my server bash_aliases
 alias sv=" ssh root@185.241.55.82"
 alias ll="ls -alF"
 alias v="vim"
 alias pt="python3"
 
-
-
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# Setting for vim
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_OPS="--extended"
