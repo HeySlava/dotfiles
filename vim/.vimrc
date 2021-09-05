@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -40,6 +41,19 @@ Plugin 'junegunn/fzf.vim'
 
 Plugin 'flazz/vim-colorschemes'
 " Plugin 'xolox/vim-colorscheme-switcher'
+"
+"
+" Plugins for makdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'iamcco/markdown-preview.nvim'
+
+let g:vim_markdown_folding_disabled = 1
+set conceallevel=2
+" g:vim_markdown_fenced_languages
+autocmd FileType markdown normal zR
+let g:mkdp_markdown_css = '~/dotfiles/vim/.github-markdown-css'
+let g:vim_markdown_no_extensions_in_markdown = 1
 
 
 " All of your Plugins must be added before the following line
@@ -139,10 +153,7 @@ inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
-inoremap ( (<c-g>u
-inoremap ) )<c-g>u
-inoremap [ [<c-g>u
-inoremap ] ]<c-g>u
+
 
 nmap <leader>gf :diffget //3<CR>
 nmap <leader>gj :diffget //2<CR>
@@ -151,10 +162,13 @@ nmap <leader>gs :G<CR>
 set guifont=Monaco:h18
 colorscheme OceanicNext
 
-map <C-S-j> :w !python3<CR>
+map pt :w !python3<CR>
+map tpt :!w python3<CR>
 
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
+
+
 
