@@ -116,7 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ $USER == "slava" ]
+
+if [ $HOSTNAME != "slava-Ideapad-Z575" ]
 then 
     xmodmap ~/dotfiles/bash/.Xmodmap
 fi

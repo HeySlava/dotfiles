@@ -55,7 +55,6 @@ autocmd FileType markdown normal zR
 let g:mkdp_markdown_css = '~/dotfiles/vim/.github-markdown-css'
 let g:vim_markdown_no_extensions_in_markdown = 1
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -143,6 +142,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" remap for markdown
+nnoremap <leader>om :MarkdownPreview<CR>
+nnoremap <leader>cm :MarkdownPreviewStop<CR>
 
 let $FZF_DEFAULT_COMMAND = 'rg --files'
 vnoremap <leader>p "_dP
