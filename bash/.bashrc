@@ -128,6 +128,8 @@ alias ll="ls -alF"
 alias v="vim"
 alias pt="python3"
 
+bind 'set bell-style none'
+
 # Setting for vim
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # export FZF_DEFAULT_COMMAND='rg --files'
