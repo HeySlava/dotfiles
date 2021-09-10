@@ -11,24 +11,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 " plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
@@ -38,16 +25,15 @@ Plugin 'mbbill/undotree'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
-
 Plugin 'flazz/vim-colorschemes'
 " Plugin 'xolox/vim-colorscheme-switcher'
-"
-"
+
 " Plugins for makdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'iamcco/markdown-preview.nvim'
 
+call vundle#end()
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
 " g:vim_markdown_fenced_languages
@@ -55,29 +41,9 @@ autocmd FileType markdown normal zR
 let g:mkdp_markdown_css = '~/dotfiles/vim/.github-markdown-css'
 let g:vim_markdown_no_extensions_in_markdown = 1
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
-
-
-" au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-" au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
-" Настройки табов для Python, согласно рекоммендациям
 set nu
 set guicursor=
+set ignorecase
 set incsearch
 set undodir=~/.vim/undodir
 set undofile
@@ -104,7 +70,6 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 
 syntax off "Включить подсветку синтаксиса
 
-" set nu "Включаем нумерацию строк
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
 set termencoding=utf-8 "Кодировка терминала
@@ -157,20 +122,17 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
 
-nmap <leader>gf :diffget //3<CR>
-nmap <leader>gj :diffget //2<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
 set guifont=Monaco:h18
 colorscheme OceanicNext
 
-map pt :w !python3<CR>
-map tpt :!w python3<CR>
+nnoremap pt :w !python3<CR>
+nnoremap <leader>pt :!w python3<CR>
 
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-
-
-
