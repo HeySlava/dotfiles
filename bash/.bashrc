@@ -119,7 +119,7 @@ fi
 
 if [ $HOSTNAME != "slava-Ideapad-Z575" ]
 then 
-    xmodmap ~/dotfiles/bash/.Xmodmap
+    xmodmap ~/.dotfiles/bash/.Xmodmap
 fi
 
 # my server bash_aliases
