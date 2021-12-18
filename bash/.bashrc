@@ -125,7 +125,32 @@ fi
 # my server bash_aliases
 alias ll="ls -alF"
 alias pt="python3"
+alias tx="tmuxinator"
 
 bind 'set bell-style none'
 
 export EDITOR='nvim'
+
+# auto tmux
+# if [[ "$TERM" != "screen-256color" ]]
+# then
+# tmux attach-session -t "$USER" || tmux new-session -s "$USER"
+# exit
+# fi
+
+session_name="$USER"
+
+# 1. First you check if a tmux session exists with a given name.
+tmux has-session -t=$session_name 2> /dev/null
+
+# 2. Create the session if it doesn't exists.
+if [[ $? -ne 0 ]]; then
+  TMUX='' tmux new-session -d -s "$session_name"
+fi
+
+# 3. Attach if outside of tmux, switch if you're in tmux.
+if [[ -z "$TMUX" ]]; then
+  tmux attach -t "$session_name"
+else
+  tmux switch-client -t "$session_name"
+fi
