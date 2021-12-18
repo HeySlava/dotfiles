@@ -117,20 +117,15 @@ if ! shopt -oq posix; then
 fi
 
 
-if [ $HOSTNAME != "slava-Ideapad-Z575" ]
+if [ $HOSTNAME == "desktop" ]
 then 
     xmodmap ~/.dotfiles/bash/.Xmodmap
 fi
 
 # my server bash_aliases
-alias sv=" ssh root@185.241.55.82"
 alias ll="ls -alF"
-alias v="vim"
 alias pt="python3"
 
 bind 'set bell-style none'
 
-# Setting for vim
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# export FZF_DEFAULT_COMMAND='rg --files'
-export FZF_DEFAULT_OPS="--extended"
+export EDITOR='nvim'
