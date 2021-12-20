@@ -128,6 +128,7 @@ alias pt="python3.10"
 alias python="python3.10"
 alias tx="tmuxinator"
 alias tt="source ~/.new_session_tt"
+alias pdf="lowriter --convert-to pdf *.doc*"
 
 bind 'set bell-style none'
 
