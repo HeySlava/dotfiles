@@ -269,8 +269,8 @@ map gw :Bclose<cr>
 set colorcolumn=79
 
 " run current script with python3 by CTRL+R in command and insert mode
-autocmd FileType python map <buffer> <leader>pt :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-" autocmd FileType python imap <buffer> <leader>pt <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <leader>pt :w<CR>:exec '!python3.10' shellescape(@%, 1)<CR>
+" autocmd FileType python imap <buffer> <leader>pt <esc>:w<CR>:exec '!python3.10' shellescape(@%, 1)<CR>
 
 
 " Find files using Telescope command-line sugar.

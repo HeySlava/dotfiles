@@ -124,7 +124,8 @@ fi
 
 # my server bash_aliases
 alias ll="ls -alF"
-alias pt="python3"
+alias pt="python3.10"
+alias python="python3.10"
 alias tx="tmuxinator"
 alias tt="source ~/.new_session_tt"
 
