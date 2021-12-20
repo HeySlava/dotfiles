@@ -131,6 +131,11 @@ alias tt="source ~/.new_session_tt"
 bind 'set bell-style none'
 
 export EDITOR='nvim'
+if [ $HOSTNAME == "lenovo" ]
+then 
+    export PATH=$PATH:/home/slava/.python3.10.1/bin/
+fi
+
 
 # Create tmux session automatically
 source ~/.new_session_tt
