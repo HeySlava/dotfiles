@@ -1,0 +1,15 @@
+# /home/slava/.config/tmuxinator/vk.yml
+
+name: vk
+root: ~/code/porno
+
+# startup_window: editor
+
+windows:
+  - editor:
+      layout: 5235,203x54,0,0[203x43,0,0,13,203x10,0,44,14]
+      panes:
+        - vim:
+          - source porno_venv/bin/activate
+        - console:
+          - source porno_venv/bin/activate

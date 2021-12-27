@@ -285,6 +285,9 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+lua << EOF
+vim.api.nvim_set_keymap('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>', {noremap=true})
+EOF
 
 vnoremap <leader>p "_dP
 

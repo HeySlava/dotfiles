@@ -133,10 +133,7 @@ alias pdf="lowriter --convert-to pdf *.doc*"
 bind 'set bell-style none'
 
 export EDITOR='nvim'
-if [ $HOSTNAME == "lenovo" ]
-then 
-    export PATH=$PATH:/home/slava/.python3.10.1/bin/
-fi
+export PATH=$PATH:/home/slava/.python3.10.1/bin/
 
 
 # Create tmux session automatically
