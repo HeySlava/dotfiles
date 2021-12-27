@@ -129,6 +129,7 @@ cmp.setup {
 }
 EOF
 
+set pumheight=5 
 
 nnoremap <leader>ao <cmd>lua require('cmp').setup.buffer { enabled = true }<CR>
 nnoremap <leader>af <cmd>lua require('cmp').setup.buffer { enabled = false }<CR>

@@ -140,6 +140,6 @@ fi
 
 
 # Create tmux session automatically
-source ~/.new_session_tt
+# source ~/.new_session_tt
 
 
