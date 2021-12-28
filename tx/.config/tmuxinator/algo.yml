@@ -1,7 +1,7 @@
-# /home/slava/.config/tmuxinator/api.yml
+# /home/slava/.config/tmuxinator/algo.yml
 
-name: api
-root: ~/code/digital
+name: algo
+root: ~/code/algorithms
 
 # Optional tmux socket
 # socket_name: foo
