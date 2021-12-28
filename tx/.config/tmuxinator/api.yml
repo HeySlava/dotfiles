@@ -1,0 +1,17 @@
+# /home/slava/.config/tmuxinator/api.yml
+
+name: api
+root: ~/code/api_book/smilecook
+
+# Optional tmux socket
+# socket_name: foo
+startup_window: editor
+
+windows:
+  - editor:
+      layout: e9a0,142x37,0,0[142x27,0,0,2,142x9,0,28,3]
+      panes:
+        - nvim:
+            - source smilecook_venv/bin/activate
+        - concole:
+            - source smilecook_venv/bin/activate
