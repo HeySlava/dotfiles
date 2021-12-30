@@ -16,8 +16,8 @@ windows:
           - clear
           - git status
         - console:
-            source ../dig_venv/bin/activate
-            ls
+          - source ../dig_venv/bin/activate
+          - ls
   - server:
       panes:
         - server:
