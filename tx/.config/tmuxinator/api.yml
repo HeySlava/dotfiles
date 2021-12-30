@@ -13,5 +13,9 @@ windows:
       panes:
         - nvim:
             - source smilecook_venv/bin/activate
+            - clear
+            - git status
         - concole:
             - source smilecook_venv/bin/activate
+            - clear
+            - ls

@@ -13,5 +13,7 @@ windows:
       panes:
         - nvim:
             - source work_venv/bin/activate
+            - cd gov_api
         - concole:
             - source work_venv/bin/activate
+            - cd gov_api
