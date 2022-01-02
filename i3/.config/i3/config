@@ -9,8 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
-exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
+set $mod Mod4
+exec setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle"
 
 # keycode 9 = grave asciitilde
 # keycode 49 = Escape
@@ -230,3 +230,6 @@ assign [class="Google-chrome"] $ws1
 
 # Нет фокуса при наведении мыши 
 focus_follows_mouse no
+
+
+bindsym $mod+p exec flameshot gui
