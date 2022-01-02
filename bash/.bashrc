@@ -122,6 +122,9 @@ then
     xmodmap ~/.dotfiles/bash/.Xmodmap
 fi
 
+setxkbmap -option ctrl:nocaps
+
+
 # my server bash_aliases
 alias ll="ls -alF"
 alias pt="python3.10"
@@ -137,6 +140,6 @@ export PATH=$PATH:/home/slava/.python3.10.1/bin/
 
 
 # Create tmux session automatically
-source ~/.new_session_tt
+# source ~/.new_session_tt
 
 
