@@ -28,6 +28,8 @@ Plug 'morhetz/gruvbox'  " colorscheme gruvbox
 Plug 'mhartington/oceanic-next'  " colorscheme OceanicNext
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
+Plug 'nikolvs/vim-sunbather'
+
 
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -57,8 +59,13 @@ call plug#end()
         \ {'*'   : ['.', '>', ':', ';', ',', '{<CR>', '/*', '/*<CR>', '[', ']'],}
 
 
-colorscheme OceanicNext
+colorscheme sunbather 
 syntax off
+
+=======
+
+" syntax off
+>>>>>>> be166b3c3aaf720abf0f6018812234be18f97ef2
 "let g:material_terminal_italics = 1
 " variants: default, palenight, ocean, lighter, darker, default-community,
 "           palenight-community, ocean-community, lighter-community,
