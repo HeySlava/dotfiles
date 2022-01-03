@@ -1,6 +1,6 @@
-# /home/slava/.config/tmuxinator/api.yml
+# /home/slava/.config/tmuxinator/dig.yml
 
-name: api
+name: dig
 root: ~/code/digital/authdemo
 
 # Optional tmux socket
