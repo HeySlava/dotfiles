@@ -62,6 +62,10 @@ call plug#end()
 colorscheme sunbather 
 syntax off
 
+=======
+
+" syntax off
+>>>>>>> be166b3c3aaf720abf0f6018812234be18f97ef2
 "let g:material_terminal_italics = 1
 " variants: default, palenight, ocean, lighter, darker, default-community,
 "           palenight-community, ocean-community, lighter-community,
