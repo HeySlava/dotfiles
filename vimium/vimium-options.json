@@ -1,0 +1,66 @@
+{
+  "settingsVersion": "1.67",
+  "exclusionRules": [
+    {
+      "pattern": "https?://www.youtube.com/*",
+      "passKeys": "dftfsmk"
+    },
+    {
+      "pattern": "https?://stepik.org/*",
+      "passKeys": "sdf"
+    },
+    {
+      "pattern": "https?://colab.research.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.overleaf.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://localhost:*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://analytics.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://oemgzhth.labs.coursera.org/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://kkb-production.jupyter-proxy.kaggle.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.coursera.org/*",
+      "passKeys": "df"
+    },
+    {
+      "pattern": "https?://127.0.0.1/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://premier.one/*",
+      "passKeys": "sd"
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "# Insert your preferred key mappings here.\nmap J goBack\nmap K goForward\nmap H previousTab\nmap L nextTab",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": true,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\nc: https://dictionary.cambridge.org/dictionary/english/%s Cambridge Dictionary\nt: https://translate.google.com/?sl=en&tl=ru&text=%s Google Translate",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
