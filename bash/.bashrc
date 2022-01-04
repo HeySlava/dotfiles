@@ -132,6 +132,9 @@ alias python="python3.10"
 alias tx="tmuxinator"
 alias tt="source ~/.new_session_tt"
 alias pdf="lowriter --convert-to pdf *.doc*"
+alias ssh='kitty +kitten ssh'
+alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
+alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
 
 bind 'set bell-style none'
 
@@ -142,4 +145,4 @@ export PATH=$PATH:/home/slava/.python3.10.1/bin/
 # Create tmux session automatically
 # source ~/.new_session_tt
 
-
+setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
