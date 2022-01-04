@@ -1,6 +1,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id nitrogen --restore
+bindsym $mod+g exec kitty -e nvim /home/slava/.config/i3/config
 
 set $mod Mod1
 exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
@@ -100,7 +101,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:Google"
-set $ws2 "2:Work"
+set $ws2 "2:Editor"
 set $ws3 "3:Zathura"
 set $ws4 "4"
 set $ws5 "5"
@@ -204,18 +205,10 @@ client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
 assign [class="google-chrome"] $ws1
 assign [class="org.pwmt.zathura"] $ws3
-# assign [class="Code"] $ws3
-# assign [class="hyper"] $ws1
-# assign [class="deluge"] $ws9
-# assign [class="Slack"] $ws9
-# assign [class="discord"] $ws9
-# assign [class="zoom"] $ws9
-# assign [class="Evince"] $ws8
 
 # Нет фокуса при наведении мыши 
 focus_follows_mouse no
 
 
 bindsym $mod+p exec flameshot gui
-# bindsym $mod+n exec "nvim ~/.dotfiles/i3/.config/i3/config"
 
