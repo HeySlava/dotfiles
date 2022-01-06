@@ -1,7 +1,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id nitrogen --restore
-bindsym $mod+g exec kitty -e nvim /home/slava/.config/i3/config
+bindsym $mod+g exec ~/code/bash_scripts/own_screenshot.sh
 
 set $mod Mod1
 exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
