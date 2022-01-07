@@ -219,7 +219,7 @@ bindsym $mod+p exec flameshot gui
 workspace_auto_back_and_forth yes
 
 # toggle floating
-bindsym $mod+shift+t floating toggle
+bindsym $mod+shift+f floating toggle
 
 bindsym $mod+shift+u move scratchpad
 bindsym $mod+u scratchpad show
