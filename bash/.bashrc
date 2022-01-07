@@ -135,6 +135,7 @@ alias pdf="lowriter --convert-to pdf *.doc*"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
+alias notedir="pwd > ~/code/bash_scripts/own_screenshot.config"
 
 bind 'set bell-style none'
 
