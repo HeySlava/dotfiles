@@ -35,11 +35,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-"
+
 " Plugins for makdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
+
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -51,6 +55,11 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 " Plug 'lyokha/vim-xkbswitch'
 
 call plug#end()
+
+let g:UltiSnipsExpandTrigger="<tab>"
+" list all snippets for current filetype
+let g:UltiSnipsListSnippets="<c-l>"
+
 
 " xkb-switch
 " let g:XkbSwitchEnabled = 1
@@ -298,6 +307,12 @@ nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gs :G<CR>
 
+
+" syntax maping
+map <leader>so :syntax on<cr>
+map <leader>sf :syntax off<cr>
+
+" =============================================================================
 " Setting for markdown
 let g:vim_markdown_folding_disabled = 1
 set conceallevel=2
@@ -305,6 +320,26 @@ autocmd FileType markdown normal zR
 let g:mkdp_markdown_css = '~/dotfiles/vim/.github-markdown-css'
 let g:vim_markdown_no_extensions_in_markdown = 1 
 
-" syntax maping
-map <leader>so :syntax on<cr>
-map <leader>sf :syntax off<cr>
+
+"Markdown block code
+au FileType markdown :vmap \q di~~~~<ENTER><ENTER>~~~~<ESC>kP
+au FileType markdown nmap <leader>q ddi~~~~<ENTER>~~~~<ENTER><ESC>kP
+
+"Markdown inline code
+au FileType markdown :vmap \w di``<ESC>hp
+au FileType markdown nmap <leader>w diwi``<ESC>hp
+
+"Markdown link
+au FileType markdown nmap <leader>l i![markdown template](https://link.com)<ESC>vib
+
+
+"Markdown table
+ 
+
+"Markdown bold
+au FileType markdown :vmap \b di****<ESC>hhp
+au FileType markdown nmap <leader>b diwi<space>****<ESC>hhp
+
+"Markdown italiq
+au FileType markdown :vmap \i di**<ESC>hp
+au FileType markdown nmap <leader>i diwi**<ESC>hp
