@@ -5,7 +5,6 @@ bindsym $mod+g exec ~/code/bash_scripts/own_screenshot.sh
 
 set $mod Mod1
 exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
-exec_always zathura
 
 # keycode 9 = grave asciitilde
 # keycode 49 = Escape
@@ -187,7 +186,7 @@ smart_gaps on
 for_window [class=".*"] border pixel 1
 
 # dropdown
-exec_always --no-startup-id kitty --class dropdown -e ~/.new_session_tt  
+exec --no-startup-id kitty --class dropdown -e ~/.new_session_tt
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 800 500
 for_window [instance="dropdown"] move scratchpad
