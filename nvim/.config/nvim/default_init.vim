@@ -342,4 +342,4 @@ au FileType markdown nmap <leader>b diwi<space>****<ESC>hhp
 
 "Markdown italiq
 au FileType markdown :vmap \i di**<ESC>hp
-au FileType markdown nmap <leader>i diwi**<ESC>hp
+au FileType markdown nmap <leader>i diwi<space>**<ESC>hp
