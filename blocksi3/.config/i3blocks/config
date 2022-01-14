@@ -3,10 +3,6 @@ command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $3, $2) }'
 interval=once
 color=#C9E3DB
 
-[BATTERY]
-command=~/.config/i3blocks/battery/battery_info.sh
-interval=3
-
 [CPU]
 full_text= CPU:  0.00% @ +00.0°C 
 command=~/.config/i3blocks/cpu/cpu_info.sh
@@ -17,6 +13,10 @@ color=#00B4EB
 command=free -h | awk '/Mem:/ { printf(" 🐏 %5s/%s \n", $3, $2) }'
 interval=1
 color=#FEC925
+
+[BATTERY]
+command=~/.config/i3blocks/battery/battery_info.sh
+interval=3
 
 [TIME_DATE]
 command=date +"%d/%m/%Y - %H:%M"
