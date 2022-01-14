@@ -109,7 +109,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "10:Communication"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -190,7 +190,7 @@ exec --no-startup-id kitty --class dropdown -e ~/.new_session_tt
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 800 500
 for_window [instance="dropdown"] move scratchpad
-bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"] move position 550px 134px
 
 # desable border for full screen
 smart_borders on
@@ -211,6 +211,7 @@ client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
 assign [class="(?i)google-chrome"] $ws1
 assign [class="(?i)zathura"] $ws3
+assign [class="(?i)slack"] $ws10
 
 # Нет фокуса при наведении мыши 
 focus_follows_mouse no
