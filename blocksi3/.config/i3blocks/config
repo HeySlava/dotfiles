@@ -1,3 +1,8 @@
+[GIF]
+command=~/.config/i3blocks/recording_gif/icon.sh
+#command=ps -aux | grep ffmpeg | wc -l
+interval=repeat
+
 [DISK]
 command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $3, $2) }'
 interval=once
@@ -19,5 +24,5 @@ command=~/.config/i3blocks/battery/battery_info.sh
 interval=3
 
 [TIME_DATE]
-command=date +"%d/%m/%Y - %H:%M"
+command=date +"%d.%m.%Y - %H:%M"
 interval=1

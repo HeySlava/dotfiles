@@ -117,10 +117,10 @@ if ! shopt -oq posix; then
 fi
 
 
-if [ $HOSTNAME == "desktop" ]
-then 
-    xmodmap ~/.dotfiles/bash/.Xmodmap
-fi
+# if [ $HOSTNAME == "desktop" ]
+# then 
+#     xmodmap ~/.dotfiles/bash/.Xmodmap
+# fi
 
 setxkbmap -option ctrl:nocaps
 
@@ -141,6 +141,7 @@ bind 'set bell-style none'
 
 export EDITOR='nvim'
 export PATH=$PATH:/home/slava/.python3.10.1/bin/
+# export PATH=$PATH:/home/slava/code/bash_scripts/custom_gif
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
