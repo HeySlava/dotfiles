@@ -12,8 +12,12 @@ windows:
       layout: e9a0,142x37,0,0[142x27,0,0,2,142x9,0,28,3]
       panes:
         - nvim:
+            - . setenv.sh
             - source work_venv/bin/activate
             - cd gov_api
+            - clear 
+            - git status
         - concole:
+            - . setenv.sh
             - source work_venv/bin/activate
             - cd gov_api

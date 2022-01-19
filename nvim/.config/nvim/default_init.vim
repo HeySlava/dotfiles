@@ -143,6 +143,7 @@ EOF
 
 set pumheight=5 
 
+" autocomplete on/off
 nnoremap <leader>ao <cmd>lua require('cmp').setup.buffer { enabled = true }<CR>
 nnoremap <leader>af <cmd>lua require('cmp').setup.buffer { enabled = false }<CR>
 
@@ -327,7 +328,7 @@ au FileType markdown nmap <leader>q ddi~~~~<ENTER>~~~~<ENTER><ESC>kP
 
 "Markdown inline code
 au FileType markdown :vmap \w di``<ESC>hp
-au FileType markdown nmap <leader>w diwi``<ESC>hp
+au FileType markdown nmap <leader>w diw<space>i``<ESC>hp
 
 "Markdown link
 au FileType markdown nmap <leader>l i![markdown template](https://link.com)<ESC>vib

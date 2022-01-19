@@ -49,7 +49,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.\nmap J goBack\nmap K goForward\nmap H previousTab\nmap L nextTab",
+  "keyMappings": "# Insert your preferred key mappings here.\nmap J goBack\nmap K goForward\nmap H previousTab\nmap L nextTab\nmap ' Marks.activateGotoMode",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
