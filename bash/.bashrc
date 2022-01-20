@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -61,7 +61,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
+#unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -136,12 +136,13 @@ alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
 alias notedir="pwd > ~/code/bash_scripts/own_screenshot.config"
+alias engru='setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"'
+
 
 bind 'set bell-style none'
 
 export EDITOR='nvim'
 export PATH=$PATH:/home/slava/.python3.10.1/bin/
-# export PATH=$PATH:/home/slava/code/bash_scripts/custom_gif
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
