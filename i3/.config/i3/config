@@ -5,8 +5,7 @@ bindsym $mod+g exec ~/code/bash_scripts/own_screenshot.sh
 bindsym $mod+shift+p exec ~/code/bash_scripts/custom_gif
 
 set $mod Mod1
-exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
-
+exec_always setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
 # keycode 9 = grave asciitilde
 # keycode 49 = Escape
 

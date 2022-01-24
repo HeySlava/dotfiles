@@ -136,7 +136,6 @@ alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
 alias notedir="pwd > ~/code/bash_scripts/own_screenshot.config"
-alias engru='setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"'
 
 
 bind 'set bell-style none'
@@ -162,5 +161,4 @@ else
  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 
-# language
-setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
+setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
