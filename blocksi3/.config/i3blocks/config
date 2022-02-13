@@ -1,6 +1,9 @@
+[WEATER]
+command=curl wttr.in?format=2
+interval=600
+
 [GIF]
 command=~/.config/i3blocks/recording_gif/icon.sh
-#command=ps -aux | grep ffmpeg | wc -l
 interval=repeat
 
 [DISK]

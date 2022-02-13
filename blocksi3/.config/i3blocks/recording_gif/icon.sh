@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ffmpeg_process=$(ps -aux | grep custom_gif | wc -l)
+ffmpeg_process=$(ps -aux | grep --color=auto ffmpeg | wc -l)
 
 if [ $ffmpeg_process -eq 1 ]
 then

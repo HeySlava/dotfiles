@@ -108,7 +108,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9:Zoom"
+set $ws9 "9:Speech"
 set $ws10 "10:Communication"
 
 # switch to workspace
@@ -190,16 +190,16 @@ exec --no-startup-id kitty --class dropdown -e ~/.new_session_tt
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 800 500
 for_window [instance="dropdown"] move scratchpad
-bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"] move position 550px 134px
+bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
 # desable border for full screen
 smart_borders on
 
 # ЦВЕТ РАМОК 
 #                       Рамка   Фон     Индикатор Родительская_рамка
-client.focused			#1c1b22 #828282 #CBCAD0 #1c1b22
+client.focused			#1c1b22 #ffffff #CBCAD0 #1c1b22
 client.focused_inactive	#1c1b22 #1c1b22 #1c1b22 #1c1b22
-client.unfocused		#1c1b22 #1c1b22 #1c1b22 #1c1b22
+client.unfocused		#1c1b22 #000000 #1c1b22 #1c1b22
 client.urgent			#1c1b22 #1c1b22 #1c1b22 #1c1b22
 client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
 
@@ -212,7 +212,7 @@ client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
 assign [class="(?i)google-chrome"] $ws1
 assign [class="(?i)zathura"] $ws3
 assign [class="zoom"] $ws9
-assign [class="discord"] $ws10
+assign [class="discord"] $ws9
 assign [class="(?i)slack"] $ws10
 
 # Нет фокуса при наведении мыши 
