@@ -109,7 +109,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9:Speech"
-set $ws10 "10:Communication"
+set $ws10 "10:Chat"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1

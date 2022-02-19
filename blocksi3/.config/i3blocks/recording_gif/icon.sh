@@ -1,14 +1,16 @@
 #!/bin/bash
 
-ffmpeg_process=$(ps -aux | grep --color=auto ffmpeg | wc -l)
+# ffmpeg_process=$(ps -aux | grep --color=auto ffmpeg | wc -l)
 
-if [ $ffmpeg_process -eq 1 ]
+TMP_FILE="/tmp/custom_gif_tmp"
+
+if [ -f $TMP_FILE ]
 then
-    answer=""
-    color="#0000FF"
-else
     answer="RECORD"
     color="#FF0000"
+else
+    answer=""
+    color="#0000FF"
 fi
 
 echo $answer
