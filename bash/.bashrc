@@ -157,3 +157,6 @@ else
 fi
 
 setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
+
+
+function cht() { curl "cht.sh/$1"; }
