@@ -1,11 +1,15 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id nitrogen --restore
-bindsym $mod+g exec ~/code/bash_scripts/own_screenshot.sh
+bindsym $mod+g exec ~/code/bash_scripts/own_screenshot/own_screenshot.sh
 bindsym $mod+shift+p exec ~/code/bash_scripts/custom_gif
+
+
 
 set $mod Mod1
 exec_always setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
+exec_always setxkbmap -option ctrl:nocaps
+
 # keycode 9 = grave asciitilde
 # keycode 49 = Escape
 
@@ -192,6 +196,14 @@ for_window [instance="dropdown"] resize set 800 500
 for_window [instance="dropdown"] move scratchpad
 bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
+
+# notes
+bindsym $mod+n exec --no-startup-id kitty --class notes -e ~/code/bash_scripts/make_todo_notes.sh
+for_window [instance="notes"] floating enable
+for_window [instance="notes"] resize set 800 500
+
+# show notes
+bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv $HOME/notes/todo.csv todo"
 # desable border for full screen
 smart_borders on
 
@@ -214,6 +226,7 @@ assign [class="(?i)zathura"] $ws3
 assign [class="zoom"] $ws9
 assign [class="discord"] $ws9
 assign [class="(?i)slack"] $ws10
+assign [class="TelegramDesktop"] $ws10
 
 # Нет фокуса при наведении мыши 
 focus_follows_mouse no
