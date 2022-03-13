@@ -286,6 +286,7 @@ set colorcolumn=79
 autocmd FileType python map <buffer> <leader>pt :w<CR>:exec '!python3.10' shellescape(@%, 1)<CR>
 " autocmd FileType python imap <buffer> <leader>pt <esc>:w<CR>:exec '!python3.10' shellescape(@%, 1)<CR>
 
+map <leader>sl :!~/sqlite3 < %<CR>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
