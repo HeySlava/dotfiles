@@ -104,9 +104,6 @@ fi
 #     xmodmap ~/.dotfiles/bash/.Xmodmap
 # fi
 
-setxkbmap -option ctrl:nocaps
-
-
 # my server bash_aliases
 alias ll="ls -alF"
 alias pt="python3.10"
@@ -142,8 +139,8 @@ export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
 
 
-export PGDATA=/home/slava/.postgresql/data
-export PATH=$PATH:/$HOME/.postgresql/bin
+export PGDATA=$PATH:/.postgres14-2/data
+export PATH=$PATH:/$HOME/.postgres14-2/bin
 
 
 # Add git branch if its present to PS1
@@ -157,6 +154,6 @@ else
 fi
 
 setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
-
+setxkbmap -option ctrl:nocaps
 
 function cht() { curl "cht.sh/$1"; }
