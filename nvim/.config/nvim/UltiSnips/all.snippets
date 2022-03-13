@@ -1,0 +1,35 @@
+snippet todo "creates template for todo (start, end, tag, task, status)"
+"`date +%'Y-%m-%d %H:%M'`","${1:`date +%'Y-%m-%d %H:%M'`}","${2:My tag}","${3:mytask}","${4:Set up}"
+endsnippet
+
+snippet rdate "create date from shift" i
+`!p
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+date_after_month = datetime.today()+ relativedelta(months=1)
+
+
+def time_search(pattern, string=snip.v.text):
+	time_amount = re.search(pattern, string)
+	if time_amount is not None:
+		time_amount = time_amount.group(0)
+		num, time_type = time_amount[:-1], time_amount[-1]
+
+		if time_type.lower() == 'd':
+			return timedelta(days=int(num))
+		elif time_type.lower() == 'w': 
+			return timedelta(weeks=int(num))
+		elif time_type.lower() == 'm': 
+			return relativedelta(months=int(num))
+		elif time_type.lower() == 'y': 
+			return relativedelta(years=int(num))
+	else:
+		return timedelta(days=0)
+
+
+pattern_list = ('\d+[dD]+', '\d+[wW]+', '\d+[mM]+', '\d+[yY]+')
+today = datetime.now()
+for pat in pattern_list:
+	today += time_search(pat, string=snip.v.text)
+snip.rv = today.strftime('%Y-%m-%d %H:%M')`
+endsnippet
