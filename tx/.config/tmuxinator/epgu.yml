@@ -1,0 +1,50 @@
+# /home/slava/.config/tmuxinator/epgu.yml
+
+name: epgu
+root: ~/code/epgu
+
+startup_window: editor
+
+windows:
+  - editor:
+      layout: 7808,213x57,0,0[213x34,0,0{106x34,0,0,17,106x34,107,0,18},213x22,0,35{106x22,0,35,19,106x22,107,35,20}]
+      panes:
+        - nvim:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+            - cd src/gov
+        - concole:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+            - cd tests
+            - pytest -v .
+        - test1:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+        - test2:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - cd tests
+            - clear
+  - bash:
+      panes:
+        - nvim:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+        - concole:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+        - test1:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+        - test2:
+            - source setenv.sh
+            - source ~/.venv/epgu_venv/bin/activate
+            - clear
+
