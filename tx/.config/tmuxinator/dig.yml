@@ -12,14 +12,14 @@ windows:
       layout: e9a0,142x37,0,0[142x27,0,0,2,142x9,0,28,3]
       panes:
         - vim:
-          - source ../dig_venv/bin/activate
+          - source ~/.venv/digital_venv/bin/activate
           - clear
           - git status
         - console:
-          - source ../dig_venv/bin/activate
+          - source ~/.venv/digital_venv/bin/activate
           - ls
   - server:
       panes:
         - server:
-          - source ../dig_venv/bin/activate
+          - source ~/.venv/digital_venv/bin/activate
           - uvicorn server:app --reload

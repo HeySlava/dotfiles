@@ -3,7 +3,7 @@
   "exclusionRules": [
     {
       "pattern": "https?://www.youtube.com/*",
-      "passKeys": "dftfsmk"
+      "passKeys": "dftfskm"
     },
     {
       "pattern": "https?://stepik.org/*",
@@ -44,12 +44,20 @@
     {
       "pattern": "https?://premier.one/*",
       "passKeys": "sd"
+    },
+    {
+      "pattern": "https?://code.yandex-team.ru/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://startdatajourney.com/*",
+      "passKeys": "sdf"
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.\nmap J goBack\nmap K goForward\nmap H previousTab\nmap L nextTab\nmap ' Marks.activateGotoMode",
+  "keyMappings": "# Insert your preferred key mappings here.\nmap J goBack\nmap K goForward\nmap H previousTab\nmap L nextTab\nmap ; Marks.activateGotoMode\nmap I LinkHints.activateModeToOpenIncognito",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
