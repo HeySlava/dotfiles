@@ -1,0 +1,6 @@
+[user]
+	name = Vyacheslav Kapitonov
+	email = vyach.kapitonov@gmail.com
+[core]
+	editor = nvim
+    excludesFile = ~/.global_gitignore
