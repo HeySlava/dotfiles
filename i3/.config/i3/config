@@ -1,6 +1,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id nitrogen --restore
+exec firefox
+exec telegram-desktop
 bindsym $mod+g exec ~/code/bash_scripts/own_screenshot/own_screenshot.sh
 bindsym $mod+shift+p exec ~/code/bash_scripts/custom_gif
 
@@ -222,6 +224,7 @@ client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
 
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
 assign [class="(?i)google-chrome"] $ws1
+assign [class="firefox"] $ws1
 assign [class="(?i)zathura"] $ws3
 assign [class="zoom"] $ws9
 assign [class="discord"] $ws9
