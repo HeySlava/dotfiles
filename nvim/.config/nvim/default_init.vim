@@ -322,26 +322,4 @@ autocmd FileType markdown normal zR
 let g:mkdp_markdown_css = '~/dotfiles/vim/.github-markdown-css'
 let g:vim_markdown_no_extensions_in_markdown = 1 
 
-
-"Markdown block code
-au FileType markdown :vmap \q di~~~~<ENTER><ENTER>~~~~<ESC>kP
-au FileType markdown nmap <leader>q ddi~~~~<ENTER>~~~~<ENTER><ESC>kP
-
-"Markdown inline code
-au FileType markdown :vmap \w di``<ESC>hp
-au FileType markdown nmap <leader>w diw<space>i``<ESC>hp
-
-"Markdown link
-au FileType markdown nmap <leader>l i![markdown template](https://link.com)<ESC>vib
-
-
-"Markdown table
- 
-
-"Markdown bold
-au FileType markdown :vmap \b di****<ESC>hhp
-au FileType markdown nmap <leader>b diwi<space>****<ESC>hhp
-
-"Markdown italiq
-au FileType markdown :vmap \i di**<ESC>hp
-au FileType markdown nmap <leader>i diwi<space>**<ESC>hp
+nmap <leader>t <Plug>MarkdownPreviewToggle
