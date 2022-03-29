@@ -3,7 +3,9 @@
 exec --no-startup-id nitrogen --restore
 exec firefox
 exec telegram-desktop
-bindsym $mod+g exec ~/code/bash_scripts/own_screenshot/own_screenshot.sh
+
+bindsym $mod+g exec ~/code/bash_scripts/own_screenshot/screenshot_local.sh
+bindsym $mod+shift+g exec ~/code/bash_scripts/own_screenshot/screenshot_server.sh
 bindsym $mod+shift+p exec ~/code/bash_scripts/custom_gif
 
 
