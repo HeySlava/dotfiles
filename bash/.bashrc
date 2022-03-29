@@ -114,7 +114,7 @@ alias pdf="lowriter --convert-to pdf *.doc*"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
-alias notedir="pwd > ~/code/bash_scripts/own_screenshot.config"
+alias notedir="pwd > /tmp/screenshot_local.config"
 
 
 alias ls='ls --color=auto'
@@ -139,6 +139,7 @@ export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
 
 
+source ~/.SLAVA_VENV.sh
 export PGDATA=$PATH:/.postgres14-2/data
 export PATH=$PATH:/$HOME/.postgres14-2/bin
 
