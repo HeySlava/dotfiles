@@ -143,6 +143,9 @@ source ~/.SLAVA_VENV.sh
 export PGDATA=$PATH:/.postgres14-2/data
 export PATH=$PATH:/$HOME/.postgres14-2/bin
 
+export AIRFLOW_HOME=/home/slava/code/airflow_sqlite
+
+
 
 # Add git branch if its present to PS1
 parse_git_branch() {
