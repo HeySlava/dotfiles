@@ -204,10 +204,12 @@ bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"]
 # notes
 bindsym $mod+n exec --no-startup-id kitty --class notes -e ~/code/bash_scripts/make_todo_notes.sh
 for_window [instance="notes"] floating enable
-for_window [instance="notes"] resize set 800 500
+for_window [instance="notes"] resize set 1200 800; move center
+for_window [instance="notes"] move center
 
 # show notes
 bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv $HOME/notes/todo.csv todo"
+for_window [instance="show_notes"] resize set 1500 800; move center
 # desable border for full screen
 smart_borders on
 
