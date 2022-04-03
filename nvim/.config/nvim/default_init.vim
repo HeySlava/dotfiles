@@ -14,6 +14,7 @@ filetype indent on      " load filetype-specific indent files
 inoremap jk <esc>
 let g:mapleader=" "
 set clipboard+=unnamedplus
+set ignorecase
 
 call plug#begin('~/.config/nvim/plugged')
 
