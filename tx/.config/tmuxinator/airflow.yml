@@ -1,0 +1,26 @@
+# /home/slava/.config/tmuxinator/airflow.yml
+
+name: airflow
+root: ~/code/airflow_sqlite
+
+startup_window: editor
+
+windows:
+  - editor:
+      layout: c82e,213x57,0,0{106x57,0,0,21,106x57,107,0,22}
+      panes:
+        - nvim:
+            - ./start_pg
+            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
+        - concole:
+            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
+  - bash:
+      panes:
+        - nvim:
+            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
+            - clear
+            - airflow webserver -p 8080
+        - concole:
+            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
+            - clear
+            - airflow scheduler
