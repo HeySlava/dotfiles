@@ -209,7 +209,7 @@ for_window [instance="notes"] floating enable
 for_window [instance="notes"] resize set 1200 700; move position center
 
 # show notes
-bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv $HOME/notes/todo.csv todo"
+bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv $HOME/note/todo.csv todo"
 for_window [instance="show_notes"] resize set 1200 700; move position center
 # desable border for full screen
 smart_borders on
