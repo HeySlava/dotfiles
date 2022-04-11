@@ -12,6 +12,8 @@ set fileformat=unix
 filetype indent on      " load filetype-specific indent files
 
 inoremap jk <esc>
+nnoremap Y y$
+
 let g:mapleader=" "
 set clipboard+=unnamedplus
 set ignorecase
@@ -36,6 +38,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 
 " Plugins for makdown
 Plug 'godlygeek/tabular'
