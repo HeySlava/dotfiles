@@ -11,16 +11,20 @@ windows:
       panes:
         - nvim:
             - ./start_pg
+            - ./pg_currency
             - source ~/code/airflow_sqlite/airflow_venv/bin/activate
         - concole:
             - source ~/code/airflow_sqlite/airflow_venv/bin/activate
-  - bash:
+  - server:
       panes:
-        - nvim:
+        - webserver:
             - source ~/code/airflow_sqlite/airflow_venv/bin/activate
             - clear
             - airflow webserver -p 8080
-        - concole:
+        - scheduler:
             - source ~/code/airflow_sqlite/airflow_venv/bin/activate
             - clear
             - airflow scheduler
+        - minio:
+            - cd /home/slava/minio
+            - ./start_minio 
