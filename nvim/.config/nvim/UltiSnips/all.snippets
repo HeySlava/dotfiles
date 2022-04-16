@@ -6,7 +6,6 @@ snippet rdate "create date from shift" i
 `!p
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
-date_after_month = datetime.today()+ relativedelta(months=1)
 
 
 def time_search(pattern, string=snip.v.text):
@@ -31,5 +30,32 @@ pattern_list = ('\d+[dD]+', '\d+[wW]+', '\d+[mM]+', '\d+[yY]+')
 today = datetime.now()
 for pat in pattern_list:
 	today += time_search(pat, string=snip.v.text)
+snip.rv = today.strftime('%Y-%m-%d %H:%M')`
+endsnippet
+
+
+snippet dayend "print end of current day" i
+`!p
+from datetime import datetime
+today = datetime.now()
+snip.rv = today.strftime('%Y-%m-%d') + ' 23:59'`
+endsnippet
+
+
+snippet "\d+[Dd]+" "date shift with n day" ri
+`!p
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+num = int(str(match.group(0))[:-1])
+today = datetime.now() + timedelta(days=num)
+snip.rv = today.strftime('%Y-%m-%d %H:%M')`
+endsnippet
+
+snippet "\d+[wW]+" "date shift with n weeks" ri
+`!p
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+num = int(str(match.group(0))[:-1])
+today = datetime.now() + timedelta(weeks=num)
 snip.rv = today.strftime('%Y-%m-%d %H:%M')`
 endsnippet
