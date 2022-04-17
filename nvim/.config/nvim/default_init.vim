@@ -44,6 +44,7 @@ Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
+Plug 'vimwiki/vimwiki'
 
 " Snippets
 Plug 'SirVer/ultisnips'
