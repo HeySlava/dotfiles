@@ -104,8 +104,6 @@ fi
 #     xmodmap ~/.dotfiles/bash/.Xmodmap
 # fi
 
-# my server bash_aliases
-alias ll="ls -alF"
 alias pt="python3.10"
 alias python="python3.10"
 alias tx="tmuxinator"
@@ -117,17 +115,14 @@ alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
 alias notedir="pwd > /tmp/screenshot_local.config"
 
 
-alias ls='ls --color=auto'
-# alias dir='dir --color=auto'
-# alias vdir='vdir --color=auto'
+alias ll='ls -lhAF --group-directories-first --no-group'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-# some more ls aliases
-alias la='ls -A'
-alias l='ls -CF'
 
+alias dud='du -h -d 1'
+alias path="echo $PATH | tr : '\n'"
 
 bind 'set bell-style none'
 
