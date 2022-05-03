@@ -132,8 +132,7 @@ alias l='ls -CF'
 bind 'set bell-style none'
 
 export EDITOR='nvim'
-export PATH=$PATH:/$HOME/.python3.10.1/bin/
-export PATH=$PATH:/$HOME/code/bash_scripts/
+export PATH=$PATH:$HOME/.python3.10.1/bin/
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
