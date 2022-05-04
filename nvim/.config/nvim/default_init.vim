@@ -44,7 +44,6 @@ Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim'
-Plug 'vimwiki/vimwiki'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -57,7 +56,8 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Russian
-" Plug 'lyokha/vim-xkbswitch'
+Plug 'lyokha/vim-xkbswitch'
+
 
 call plug#end()
 
@@ -67,12 +67,11 @@ let g:UltiSnipsListSnippets="<c-l>"
 
 
 " xkb-switch
-" let g:XkbSwitchEnabled = 1
-" let g:XkbSwitchIMappings = ['ru']
-" let g:XkbSwitchSkipIMappings =
-        \ {'*'   : ['.', '>', ':', ';', ',', '{<CR>', '/*', '/*<CR>', '[', ']'],}
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchIMappings = ['ru']
 
 
+" colorscheme OceanicNext 
 colorscheme sunbather 
 syntax off
 

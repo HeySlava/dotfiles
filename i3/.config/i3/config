@@ -2,11 +2,10 @@
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop
-exec --no-startup-id firefox
 
-bindsym $mod+g exec ~/code/bash_scripts/own_screenshot/screenshot_local.sh
-bindsym $mod+shift+g exec ~/code/bash_scripts/own_screenshot/screenshot_server.sh
-bindsym $mod+shift+p exec ~/code/bash_scripts/custom_gif
+bindsym $mod+g exec screenshot_local
+bindsym $mod+shift+g exec screenshot_server
+bindsym $mod+shift+p exec custom_gif
 
 bindsym $mod+o exec nmcli con up slava
 bindsym $mod+shift+o exec nmcli con down slava
@@ -204,12 +203,12 @@ bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"]
 
 
 # notes
-bindsym $mod+n exec --no-startup-id kitty --class notes -e ~/code/bash_scripts/make_todo_notes.sh
+bindsym $mod+n exec --no-startup-id kitty --class notes -e make_todo_notes
 for_window [instance="notes"] floating enable
 for_window [instance="notes"] resize set 1200 700; [instance="notes"] move position center
 
 # show notes
-bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv $HOME/notes/todo.csv todo"
+bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv /mnt/kapitonov.tech/todo.csv todo"
 for_window [instance="show_notes"] resize set 1200 700; [instance="notes"] move position center
 # desable border for full screen
 smart_borders on
