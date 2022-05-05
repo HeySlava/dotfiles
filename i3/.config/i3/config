@@ -19,7 +19,7 @@ exec_always setxkbmap -option ctrl:nocaps
 # keycode 49 = Escape
 
 # Font size
-font pango:monospace 12
+font pango:monospace 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -208,18 +208,18 @@ for_window [instance="notes"] floating enable
 for_window [instance="notes"] resize set 1200 700; [instance="notes"] move position center
 
 # show notes
-bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e ~/sqlite3 -box -cmd ".import --csv /mnt/kapitonov.tech/todo.csv todo"
+bindsym $mod+shift+n exec --no-startup-id kitty --class show_notes -e sqlite3 -box -cmd ".import --csv /home/slava/notes/todo.csv todo"
 for_window [instance="show_notes"] resize set 1200 700; [instance="notes"] move position center
 # desable border for full screen
 smart_borders on
 
 # ЦВЕТ РАМОК 
-#                       Рамка   Фон     Индикатор Родительская_рамка
-client.focused			#1c1b22 #ffffff #CBCAD0 #1c1b22
-client.focused_inactive	#1c1b22 #1c1b22 #1c1b22 #1c1b22
-client.unfocused		#1c1b22 #000000 #1c1b22 #1c1b22
-client.urgent			#1c1b22 #1c1b22 #1c1b22 #1c1b22
-client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
+#                       Рамка   Фон     Text    Родительская_рамка
+client.focused			#00000 #d0e1f9 #1e1f26 #1c1b22
+client.focused_inactive	#00000 #1c1b22 #1c1b22 #1c1b22
+client.unfocused		#00000 #000000 #1c1b22 #1c1b22
+client.urgent			#00000 #1c1b22 #1c1b22 #1c1b22
+client.placeholder		#00000 #1c1b22 #1c1b22 #1c1b22
 
 #	client.focused — окно в фокусе
 #	client.unfocused — окно вне фокуса
