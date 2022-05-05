@@ -1,5 +1,5 @@
 [WEATER]
-command=curl wttr.in/~Russia+Tula?format=2
+command=curl wttr.in/~Russia+Tula?format=1
 interval=600
 
 [GIF]
