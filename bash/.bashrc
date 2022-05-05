@@ -111,13 +111,14 @@ alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
 alias notedir="pwd > /tmp/screenshot_local.config"
 
 
+alias ls='ls -F'
 alias ll='ls -lhAF --group-directories-first --no-group'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias dud='du -h -d 1'
+alias dud='du -h -d 1 | sort -h'
 alias path="echo $PATH | tr : '\n'"
 
 bind 'set bell-style none'
