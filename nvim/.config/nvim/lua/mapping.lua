@@ -5,6 +5,7 @@ local noremap = {noremap = true}
 vim.g.mapleader = ' '
 
 map('n', '<leader>pt', ':w !python3<CR>', noremap)
+map('n', '<leader>la', ':w !lua<CR>', noremap)
 map('i', 'jk', '<ESC>', noremap)
 map('n', 'Y', 'y$', noremap)
 

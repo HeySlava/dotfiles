@@ -2,6 +2,8 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
+Plug "neovim/nvim-lspconfig"
+
 -- color schemas
 Plug 'mhartington/oceanic-next'  -- colorscheme OceanicNext
 Plug 'nikolvs/vim-sunbather'

@@ -1,30 +1,15 @@
 # /home/slava/.config/tmuxinator/airflow.yml
 
 name: airflow
-root: ~/code/airflow_sqlite
+root: ~/code/airflow_course
 
+pre_window: source ~/.venv/airflow_course_venv/bin/activate
 startup_window: editor
 
 windows:
   - editor:
-      layout: c82e,213x57,0,0{106x57,0,0,21,106x57,107,0,22}
       panes:
         - nvim:
-            - ./start_pg
-            - ./pg_currency
-            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
+          -
         - concole:
-            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
-  - server:
-      panes:
-        - webserver:
-            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
-            - clear
-            - airflow webserver -p 8080
-        - scheduler:
-            - source ~/code/airflow_sqlite/airflow_venv/bin/activate
-            - clear
-            - airflow scheduler
-        - minio:
-            - cd /home/slava/minio
-            - ./start_minio 
+          -
