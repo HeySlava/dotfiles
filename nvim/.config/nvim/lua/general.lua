@@ -1,7 +1,5 @@
 local opt = vim.opt
 
-
-
 opt.mouse=a  -- enable mouse set encoding=utf-8
 opt.number = true
 opt.scrolloff = 7
@@ -18,7 +16,12 @@ opt.clipboard = 'unnamedplus'
 opt.ignorecase = true
 opt.fileencoding = 'utf-8'
 
-opt.colorcolumn = '79'
+vim.api.nvim_create_autocmd('BufEnter', {
+    pattern = '*.py',
+    command = 'set colorcolumn=79'
+})
+
+-- opt.colorcolumn = '79'
 
 
 -- opt.syntax = false

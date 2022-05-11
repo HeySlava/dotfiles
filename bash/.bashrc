@@ -104,7 +104,7 @@ alias pt="python3.10"
 alias python="python3.10"
 alias tx="tmuxinator"
 alias tt="source ~/.new_session_tt"
-alias pdf="lowriter --convert-to pdf *.doc*"
+alias pdf="lowriter --convert-to pdf"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
@@ -121,9 +121,14 @@ alias egrep='egrep --color=auto'
 alias dud='du -h -d 1 | sort -h'
 alias path="echo $PATH | tr : '\n'"
 
+alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-> ttl 65'"
+
+
+
 bind 'set bell-style none'
 
 export EDITOR='nvim'
+export PATH=$PATH:$HOME/.nvim/bin/
 export PATH=$PATH:$HOME/.python3.10.1/bin/
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
