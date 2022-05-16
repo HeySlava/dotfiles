@@ -181,6 +181,16 @@ bar {
         status_command i3blocks
         separator_symbol "|"
         position top
+
+        colors {
+                background #000000
+                statusline #00ff00
+                separator #000000
+                # colorclass       <border> <background> <text>
+                focused_workspace  #000000  #000000     #00ff00
+                inactive_workspace #000000  #000000     #000000
+
+        }
 }
 
 
