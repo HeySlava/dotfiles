@@ -127,9 +127,12 @@ alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-
 
 bind 'set bell-style none'
 
-export EDITOR='nvim'
+
 export PATH=$PATH:$HOME/.nvim-linux64/bin/
 export PATH=$PATH:$HOME/.python3.10.1/bin/
+export PATH=$PATH:$HOME/.local/bin/
+
+export EDITOR='nvim'
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
