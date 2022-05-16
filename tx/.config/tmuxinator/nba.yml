@@ -1,0 +1,14 @@
+# /home/slava/.config/tmuxinator/nba.yml
+
+name: nba
+root: ~/code/nba
+
+pre_window: 
+  - source ~/.venv/nba_venv/bin/activate
+  - clear
+startup_window: editor
+
+windows:
+  - editor:
+      panes:
+        - nvim:

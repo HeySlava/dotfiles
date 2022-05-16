@@ -1,0 +1,14 @@
+# /home/slava/.config/tmuxinator/sql.yml
+
+name: sql
+root: ~/code/stepic_sql
+
+pre_window: 
+  - clear
+startup_window: editor
+
+windows:
+  - editor:
+      panes:
+        - nvim:
+        - nvim:
