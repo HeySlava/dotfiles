@@ -59,3 +59,9 @@ num = int(str(match.group(0))[:-1])
 today = datetime.now() + timedelta(weeks=num)
 snip.rv = today.strftime('%Y-%m-%d %H:%M')`
 endsnippet
+
+
+
+snippet cnt "count row in sql" 
+count(${1:*}) $0
+endsnippet
