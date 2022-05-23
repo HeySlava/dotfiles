@@ -100,7 +100,7 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8:Zeal"
 set $ws9 "9:Speech"
 set $ws10 "10:Chat"
 
@@ -221,7 +221,9 @@ client.placeholder		#00000 #1c1b22 #1c1b22 #1c1b22
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
 assign [class="(?i)google-chrome"] $ws1
 assign [class="firefox"] $ws1
+assign [class="(?i)openscad"] $ws2
 assign [class="(?i)zathura"] $ws3
+assign [class="(?i)zeal"] $ws8
 assign [class="zoom"] $ws9
 assign [class="discord"] $ws9
 assign [class="(?i)slack"] $ws10
