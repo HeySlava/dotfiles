@@ -11,4 +11,6 @@ windows:
   - editor:
       panes:
         - nvim:
+          - sqlite3 course.db -box
         - nvim:
+          - nvim file
