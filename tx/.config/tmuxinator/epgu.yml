@@ -1,0 +1,30 @@
+# /home/slava/.config/tmuxinator/epgu.yml
+
+name: epgu
+root: ~/code/epgu
+
+pre_window: 
+  - . ~/.venv/epgu_venv/bin/activate
+  - . env.sh
+  - clear
+startup_window: editor
+
+
+windows:
+  - editor:
+      layout: 42bd,151x40,0,0{75x40,0,0,25,75x40,76,0,27}
+      panes:
+        - nvim:
+          - cd src/epgu/
+        - nvim:
+          - cd src/epgu/
+  - tests:
+      layout: 42bd,151x40,0,0{75x40,0,0,25,75x40,76,0,27}
+      panes:
+        - nvim:
+          - cd src/epgu/
+        - nvim:
+          - cd tests/unit
+  - config:
+      panes:
+        - nvim:

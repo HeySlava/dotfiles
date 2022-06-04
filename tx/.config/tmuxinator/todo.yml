@@ -1,0 +1,23 @@
+# /home/slava/.config/tmuxinator/todo.yml
+
+name: todo
+root: ~/code/todo
+
+pre_window: 
+  - . ~/.venv/todo_venv/bin/activate
+  - clear
+startup_window: editor
+
+windows:
+  - editor:
+      layout: e381,151x40,0,0{75x40,0,0,17,75x40,76,0[75x20,76,0,18,75x19,76,21,21]}
+      panes:
+        - nvim:
+          - cd src/todo/
+        - nvim:
+          - cd tests/unit
+        - nvim:
+          - cd tests/unit
+  - config:
+      panes:
+        - nvim:

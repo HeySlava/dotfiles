@@ -5,12 +5,22 @@ root: ~/code/stepic_sql
 
 pre_window: 
   - clear
-startup_window: editor
+startup_window: exam
 
 windows:
   - editor:
+      layout: 7263,75x30,0,0[75x18,0,0,28,75x11,0,19,29]
       panes:
         - nvim:
-          - sqlite3 course.db -box
+          - sqlite3 -box course.db
         - nvim:
-          - nvim file
+          - nvim f.sql
+  - exam:
+      layout: 7263,75x30,0,0[75x18,0,0,28,75x11,0,19,29]
+      panes:
+        - nvim:
+          - cd exam
+          - sqlite3 -box exam.db
+        - nvim:
+          - cd exam
+          - nvim f.sql

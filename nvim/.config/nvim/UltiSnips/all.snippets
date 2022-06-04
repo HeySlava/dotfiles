@@ -1,5 +1,5 @@
 snippet todo "creates template for todo (start, end, tag, task, status)"
-"`date +%'Y-%m-%d %H:%M'`","${1:`date +%'Y-%m-%d %H:%M'`}","${2:My_tag}","${3:mytask}"
+"`date +%'y-%m-%d %H:%M'`","${1:`date +%'Y-%m-%d %H:%M'`}","${2:My_tag}","${3:mytask}"
 endsnippet
 
 snippet rdate "create date from shift" i
@@ -58,4 +58,12 @@ from dateutil.relativedelta import relativedelta
 num = int(str(match.group(0))[:-1])
 today = datetime.now() + timedelta(weeks=num)
 snip.rv = today.strftime('%Y-%m-%d %H:%M')`
+endsnippet
+
+snippet cub "update words" i
+update cub
+set word = '$1'
+where 
+  combo = '$2'
+;
 endsnippet

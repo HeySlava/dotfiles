@@ -1,0 +1,21 @@
+# /home/slava/.config/tmuxinator/cub.yml
+
+name: cub
+root: ~/code/cube
+
+pre_window: 
+  - clear
+startup_window: editor
+
+windows:
+  - editor:
+      layout: 7735,151x40,0,0[151x30,0,0{75x30,0,0,3,75x30,76,0,6},151x9,0,31{75x9,0,31,2,75x9,76,31,5}]
+      panes:
+        - sql:
+          - sqlite3 -box cub.db
+        - sql:
+          - sqlite3 -box cub.db
+        - nvim:
+          -
+        - nvim:
+          -

@@ -14,3 +14,6 @@ map J zoom out
 map i recolor
 map p print
 map g goto top
+
+
+map <C-o> feedkeys ":exec zathura-copy-path $FILE<Return>"
