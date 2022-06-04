@@ -31,6 +31,18 @@ map('n', '<leader>sf', ':syntax off<cr>', noremap)
 
 map('n', '<leader>t', '<Plug>MarkdownPreviewToggle', noremap)
 
+
+
+--Telescope
+map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)
+map('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>', noremap)
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
+map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
+map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
+
+map('i', '<F1>', '<Nop>', noremap)
+map('n', '<F1>', '<Nop>', noremap)
+
 -- 
 -- set pumheight=5 
 -- 
