@@ -4,8 +4,8 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop
 
 bindsym $mod+g exec screenshot_local
-bindsym $mod+shift+g exec screenshot_server
-bindsym $mod+shift+p exec custom_gif
+bindsym $mod+shift+p exec screenshot_server
+bindsym $mod+shift+g exec custom_gif
 
 bindsym $mod+o exec nmcli con up slava
 bindsym $mod+shift+o exec nmcli con down slava
