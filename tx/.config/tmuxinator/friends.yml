@@ -1,0 +1,33 @@
+# /home/slava/.config/tmuxinator/friends.yml
+
+name: friends
+root: ~/code/friends
+
+pre_window: 
+  - . ~/.venv/friends_venv/bin/activate
+  - . token_vk.sh
+  - clear
+startup_window: editor
+
+
+windows:
+  - editor:
+      layout: 42bd,151x40,0,0{75x40,0,0,25,75x40,76,0,27}
+      panes:
+        - nvim:
+          - cd src/friends/
+        - nvim:
+          - cd src/friends/
+  - tests:
+      layout: 42bd,151x40,0,0{75x40,0,0,25,75x40,76,0,27}
+      panes:
+        - nvim:
+          - cd src/friends/
+        - nvim:
+          - cd tests/unit
+  - config:
+      panes:
+        - nvim:
+          -
+        - logs:
+          - tail -f logs/friends.log

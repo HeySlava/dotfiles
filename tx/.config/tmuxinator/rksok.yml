@@ -1,0 +1,29 @@
+# /home/slava/.config/tmuxinator/rksok.yml
+
+name: rksok
+root: ~/code/rksok
+
+pre_window: 
+  - . ~/.venv/rksok_venv/bin/activate
+  - clear
+startup_window: editor
+
+
+windows:
+  - editor:
+      layout: 42bd,151x40,0,0{75x40,0,0,25,75x40,76,0,27}
+      panes:
+        - nvim:
+          - cd src/rksok/
+        - nvim:
+          - cd src/rksok/
+  - tests:
+      layout: 42bd,151x40,0,0{75x40,0,0,25,75x40,76,0,27}
+      panes:
+        - nvim:
+          - cd src/rksok/
+        - nvim:
+          - cd tests/unit
+  - config:
+      panes:
+        - nvim:

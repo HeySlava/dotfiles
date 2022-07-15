@@ -21,12 +21,9 @@ vim.api.nvim_create_autocmd('BufEnter', {
     command = 'set colorcolumn=79'
 })
 
--- opt.colorcolumn = '79'
+vim.cmd("syntax off")
 
-
--- opt.syntax = false
-
-
+vim.cmd('colorscheme sunbather')
 
 -- set.backupdir = ~/.config/nvim/backup//
 -- set.directory = ~/.config/nvim/swap//
