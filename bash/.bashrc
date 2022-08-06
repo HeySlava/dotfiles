@@ -131,6 +131,7 @@ bind 'set bell-style none'
 export PATH=$PATH:$HOME/.nvim-linux64/bin/
 export PATH=$PATH:$HOME/.python3.10.1/bin/
 export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/.nvim-linux64/bin/nvim
 
 export EDITOR='nvim'
 export VIMCONFIG=$HOME/.config/nvim

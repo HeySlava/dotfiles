@@ -14,6 +14,7 @@ opt.fileformat=unix
 
 opt.clipboard = 'unnamedplus'
 opt.ignorecase = true
+opt.relativenumber = true
 opt.fileencoding = 'utf-8'
 
 vim.api.nvim_create_autocmd('BufEnter', {
@@ -22,9 +23,8 @@ vim.api.nvim_create_autocmd('BufEnter', {
 })
 
 vim.cmd("syntax off")
-
 vim.cmd('colorscheme sunbather')
 
--- set.backupdir = ~/.config/nvim/backup//
--- set.directory = ~/.config/nvim/swap//
--- set.undodir = ~/.config/nvim/undo//
+vim.g.python3_host_prog = '/usr/bin/python3'
+
+print('I am from general')

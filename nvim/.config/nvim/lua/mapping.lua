@@ -43,11 +43,6 @@ map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 map('i', '<F1>', '<Nop>', noremap)
 map('n', '<F1>', '<Nop>', noremap)
 
--- 
--- set pumheight=5 
--- 
--- " autocomplete on/off
--- nnoremap <leader>ao <cmd>lua require('cmp').setup.buffer { enabled = true }<CR    >
--- nnoremap <leader>af <cmd>lua require('cmp').setup.buffer { enabled = false }<C    R>
 
 
+print('I am from mapping')
