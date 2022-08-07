@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
   },
+  undotree = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/vim-airline",

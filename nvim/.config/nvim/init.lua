@@ -1,11 +1,15 @@
-require('packer-config')
-require('general')
-require('mapping')
-require('markdown')
-require('ultisnip')
-require('xkbswitch')
+require('slava')
+--
+--
+-- require('packer-config')
 
-require('telescope-config')
+-- require('settings')
+-- require('mapping')
+-- require('markdown')
+-- require('ultisnip')
+-- require('xkbswitch')
 
-require('lsp-config.cmp-settings')
-require('lsp-config.language-servers')
+-- require('telescope-config')
+
+-- require('lsp-config.cmp-settings')
+-- require('lsp-config.language-servers')
