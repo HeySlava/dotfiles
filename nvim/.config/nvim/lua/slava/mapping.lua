@@ -38,3 +38,8 @@ map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 
 map('i', '<F1>', '<Nop>', noremap)
 map('n', '<F1>', '<Nop>', noremap)
+
+map('n', '<leader>pv', ':Ex<CR>', noremap)
+map('n', '<leader>u', ':UndotreeShow<CR>', noremap)
+
+-- map('n', '<C-f>', '<cmd>silent !tmux neww ns<CR>', noremap)

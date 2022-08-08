@@ -34,3 +34,7 @@ vim.cmd('colorscheme sunbather')
 
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
+
+g.netrw_preview   = 1
+g.netrw_liststyle = 3
+g.netrw_winsize   = 30
