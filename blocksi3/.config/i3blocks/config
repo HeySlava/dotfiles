@@ -1,7 +1,12 @@
 [WEATER]
 command=curl wttr.in/~Russia+Tula?format=1
 interval=600
-color=#ffffff
+color=#C9E3DB
+
+[DOCKER]
+command=echo "$(docker ps -q | wc -l) DC"
+interval=1
+color=#C9E3DB
 
 [GIF]
 command=~/.config/i3blocks/recording_gif/icon.sh

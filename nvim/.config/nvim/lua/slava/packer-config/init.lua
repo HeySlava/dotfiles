@@ -43,7 +43,10 @@ return packer.startup(function(use)
 
     -- Plugins for makdown
     use 'plasticboy/vim-markdown'
-    use 'iamcco/markdown-preview.nvim'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
     -- Snippets
     use 'SirVer/ultisnips'
