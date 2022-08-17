@@ -7,9 +7,10 @@ import shlex
 import subprocess
 
 from datetime import datetime
+from random import random
 from pathlib import Path
 
-IMG_SALT = os.environ['IMG_SALT']
+IMG_SALT = str(random())
 IMG_DIR = Path(os.environ['HOME']) / '.img-bak'
 IMG_DIR.mkdir(parents=True, exist_ok=True)
 EXTENTION = '.png'
@@ -48,7 +49,8 @@ def main() -> None:
     args = parser.parse_args()
     if args.name:
         filename = args.name
-    filename = build_hashed_filename()
+    else:
+        filename = build_hashed_filename()
     make_screenshot(filename=filename)
 
 
