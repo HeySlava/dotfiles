@@ -167,10 +167,10 @@ bar {
 
         colors {
                 background #000000
-                statusline #00ff00
+                statusline #C9E3DB
                 separator #000000
                 # colorclass       <border> <background> <text>
-                focused_workspace  #000000  #000000     #00ff00
+                focused_workspace  #000000  #000000     #C9E3DB
                 inactive_workspace #000000  #000000     #000000
         }
 }

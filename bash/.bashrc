@@ -140,10 +140,6 @@ export VIMDATA=$HOME/.local/share/nvim
 export FZF_DEFAULT_COMMAND='rg --files'
 
 
-source ~/.SLAVA_VENV.sh
-
-
-
 setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
 setxkbmap -option ctrl:nocaps
 
@@ -157,4 +153,11 @@ fkill() {
   then
     echo $pid | xargs kill -${1:-9}
   fi
+}
+
+cpr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
+} 
+mvr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
 }
