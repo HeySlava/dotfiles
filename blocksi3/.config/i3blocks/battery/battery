@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+
+import subprocess
+
+current_battery = subprocess.run(['cat', '/sys/class/power_supply/BAT1/capacity'], capture_output=True, text=True)
+current_battery = int(current_battery.stdout)
+if current_battery < 15:
+    print(f'Current battery is: {current_battery} ')
+    print(f'Current capacity is: {current_battery} ')
+    print('#ffffff')
+    print('#ff0000')
+else:
+    print(current_battery)
