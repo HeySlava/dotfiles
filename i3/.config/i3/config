@@ -3,13 +3,17 @@
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop
 
+# keybinding to lock screen
+bindsym $mod+Control+l exec "i3lock -c 000000"
+# auto lock the screen
+# exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 000000\""
+
 bindsym $mod+g exec screenshot_local
 bindsym $mod+shift+p exec screenshot_server
 bindsym $mod+shift+g exec custom_gif
 
 bindsym $mod+o exec nmcli con up slava
 bindsym $mod+shift+o exec nmcli con down slava
-
 
 set $mod Mod1
 exec_always setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
@@ -187,11 +191,9 @@ smart_gaps on
 for_window [class=".*"] border pixel 1
 
 # dropdown
-exec_always --no-startup-id kitty --class dropdown -e ~/.new_session_tt $USER
+bindsym $mod+period exec --no-startup-id kitty --class dropdown -e ~/.new_session_tt $USER
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 800 500
-for_window [instance="dropdown"] move scratchpad
-bindsym $mod+period [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+for_window [instance="dropdown"] resize set 800 500; [instance="dropdown"] move position center
 
 
 # notes
@@ -231,7 +233,6 @@ assign [class="TelegramDesktop"] $ws10
 
 # Нет фокуса при наведении мыши 
 focus_follows_mouse no
-
 
 bindsym $mod+p exec flameshot gui
 

@@ -13,7 +13,7 @@ fi
 
 selected_name=$(basename "$selected" | tr . _)
 
-selected_name_t=${selected_name:0:8} # Makes the name in the range of 0 to 8 caracters. 
+selected_name_t=${selected_name} # Makes the name in the range of 0 to 8 caracters. 
                                      # Done it only because if you pass a certain threshold the final ']' doesn't be displaied
                                      
 # This is works in all the situations.

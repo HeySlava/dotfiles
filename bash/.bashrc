@@ -124,6 +124,7 @@ alias path="echo $PATH | tr : '\n'"
 
 alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-> ttl 65'"
 
+alias t="trans -indent 4 -d"
 
 
 bind 'set bell-style none'
