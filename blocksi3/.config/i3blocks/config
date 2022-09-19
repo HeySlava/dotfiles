@@ -25,7 +25,7 @@ color=#C9E3DB
 
 [MEM]
 command=free -h | awk '/Mem:/ { printf("%5s/%s \n", $3, $2) }'
-interval=600
+interval=1
 color=#C9E3DB
 
 [TIME_DATE]

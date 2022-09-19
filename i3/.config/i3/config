@@ -4,9 +4,9 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop
 
 # keybinding to lock screen
-bindsym $mod+Control+l exec "i3lock -c 000000"
+bindsym $mod+Control+l exec "i3lock -c 4D648D"
 # auto lock the screen
-# exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 000000\""
+# exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 4D648D\""
 
 bindsym $mod+g exec screenshot_local
 bindsym $mod+shift+p exec screenshot_server
@@ -228,6 +228,7 @@ assign [class="(?i)zathura"] $ws3
 assign [class="(?i)zeal"] $ws8
 assign [class="zoom"] $ws9
 assign [class="discord"] $ws9
+assign [class="TrueConf"] $ws9
 assign [class="(?i)slack"] $ws10
 assign [class="TelegramDesktop"] $ws10
 

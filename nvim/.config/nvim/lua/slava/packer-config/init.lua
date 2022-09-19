@@ -35,7 +35,8 @@ return packer.startup(function(use)
     use 'nikolvs/vim-sunbather'
 
 
-    use 'vim-airline/vim-airline'
+    use 'nvim-lualine/lualine.nvim'
+    -- use 'vim-airline/vim-airline'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
