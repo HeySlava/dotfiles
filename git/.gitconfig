@@ -6,3 +6,9 @@
     excludesFile = ~/.global_gitignore
 [init]
 	defaultBranch = main
+[grep]
+	patternType = perl
+[merge]
+	ff = false
+[pull]
+	rebase = false
