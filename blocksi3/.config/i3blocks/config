@@ -1,3 +1,8 @@
+[POMODORO]
+command=curl http://localhost:8080/time
+interval=1
+color=#C9E3DB
+
 [WEATER]
 command=curl wttr.in/~Russia+Tula?format=1
 interval=600
