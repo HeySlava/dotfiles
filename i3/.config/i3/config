@@ -16,11 +16,11 @@ bindsym $mod+o exec nmcli con up slava
 bindsym $mod+shift+o exec nmcli con down slava
 
 # TOMATO
-bindsym $mod+t exec curl http://localhost:8080/toggle
-bindsym $mod+shift+n exec curl http://localhost:8080/new
-bindsym $mod+n exec curl http://localhost:8080/next
-bindsym $mod+shift+d exec curl http://localhost:8080/stop
-bindsym $mod+shift+m exec curl http://localhost:8080/previous
+bindsym $mod+t exec curl http://localhost:9999/toggle
+bindsym $mod+shift+n exec curl http://localhost:9999/new
+bindsym $mod+n exec curl http://localhost:9999/next
+bindsym $mod+shift+d exec curl http://localhost:9999/stop
+bindsym $mod+shift+m exec curl http://localhost:9999/previous
 
 set $mod Mod1
 exec_always setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
