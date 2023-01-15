@@ -7,13 +7,14 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
+HISTIGNORE="&:ls:[bf]g:exit:rm:cp:mv:pwd:clear:mount:umount:[ \t]*"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=100000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -130,10 +131,8 @@ alias t="trans -indent 4 -d"
 bind 'set bell-style none'
 
 
-export PATH=$PATH:$HOME/.nvim-linux64/bin/
 export PATH=$PATH:$HOME/.python3.10.1/bin/
 export PATH=$PATH:$HOME/.local/bin/
-export PATH=$PATH:$HOME/.nvim-linux64/bin/nvim
 
 export EDITOR='nvim'
 export VIMCONFIG=$HOME/.config/nvim
