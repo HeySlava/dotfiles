@@ -9,6 +9,7 @@
 [grep]
 	patternType = perl
 [merge]
-	ff = false
+	ff = true
 [pull]
 	rebase = false
+    autoSetupRemote = true
