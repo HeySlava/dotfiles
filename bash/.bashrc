@@ -108,7 +108,6 @@ alias pdf="lowriter --convert-to pdf"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
-alias notedir="pwd > /tmp/screenshot_local.config"
 alias venv="python -m venv venv && . venv/bin/activate && pip install pip -U"
 
 
@@ -130,10 +129,8 @@ alias t="trans -indent 4 -d"
 bind 'set bell-style none'
 
 
-export PATH=$PATH:$HOME/.nvim-linux64/bin/
 export PATH=$PATH:$HOME/.python3.10.1/bin/
 export PATH=$PATH:$HOME/.local/bin/
-export PATH=$PATH:$HOME/.nvim-linux64/bin/nvim
 
 export EDITOR='nvim'
 export VIMCONFIG=$HOME/.config/nvim
