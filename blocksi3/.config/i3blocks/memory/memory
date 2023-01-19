@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 
 import subprocess
@@ -6,8 +6,17 @@ import subprocess
 memory = subprocess.run(['df', '-h'], capture_output=True, text=True)
 memory = memory.stdout
 memory = memory.split('\n')[3]
-swap = subprocess.run(['swapon', '--show'], capture_output=True, text=True).stdout.split('\n')[1].split()[2].replace('G', '')
-swap = int(swap)
+
+try:
+    swap = subprocess.run(
+            ['swapon', '--show'],
+            capture_output=True,
+            text=True,
+        )
+    swap = swap.stdout.split('\n')[1].split()[2].replace('G', '')
+    swap = int(swap)
+except FileNotFoundError:
+    swap = 0
 _, total, used, avail, _, _ = memory.replace('G', '').split()
 total = int(total)
 used = int(used)

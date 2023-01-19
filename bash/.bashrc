@@ -7,13 +7,14 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
+HISTIGNORE="&:ls:[bf]g:exit:rm:cp:mv:pwd:clear:mount:umount:[ \t]*"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=100000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -108,7 +109,8 @@ alias pdf="lowriter --convert-to pdf"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
-alias venv="python -m venv venv && . venv/bin/activate && pip install pip -U"
+alias notedir="pwd > /tmp/screenshot_local.config"
+alias venv="python -m venv /tmp/venv && . /tmp/venv/bin/activate && pip install pip -U setuptools wheel"
 
 
 alias ls='ls -F'

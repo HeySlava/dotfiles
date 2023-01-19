@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 
 import subprocess
@@ -7,11 +7,11 @@ import shlex
 load_average = subprocess.run('uptime', capture_output=True, text=True)
 load_average = load_average.stdout.split(',')[2].split()[-1].replace(',', '.')
 
-cores_number = subprocess.run(
-        shlex.split('cat /proc/cpuinfo | grep -c processor'),
-        capture_output=True, text=True)
-
-ps = subprocess.run(shlex.split('cat /proc/cpuinfo'), check=True, capture_output=True)
+ps = subprocess.run(
+        shlex.split('cat /proc/cpuinfo'),
+        check=True,
+        capture_output=True,
+    )
 cores_number = subprocess.run(
         shlex.split('grep -c processor'),
         input=ps.stdout, 
@@ -20,9 +20,13 @@ cores_number = int(cores_number.stdout.decode().strip())
 
 load = float(load_average) / cores_number * 100
 
+temp = None
 command= subprocess.run('sensors', capture_output=True, text=True) 
 for line in command.stdout.split('\n'):
     if line.startswith('Package id 0'):
         temp = line.split()[3].replace('+', '')
 
-print(f'{round(load)}%/{temp}')  # type: ignore
+if temp is None:
+    print(f'{round(load)}%')
+else:
+    print(f'{round(load)}%/{temp}')
