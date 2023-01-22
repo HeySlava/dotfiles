@@ -1,5 +1,5 @@
 [POMODORO]
-command=curl http://localhost:9999/time
+command=curl http://localhost:9999/time; echo
 interval=1
 color=#C9E3DB
 
