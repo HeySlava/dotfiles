@@ -3,20 +3,11 @@
 
 import subprocess
 import shlex
+import os
 
-load_average = subprocess.run('uptime', capture_output=True, text=True)
-load_average = load_average.stdout.split(',')[2].split()[-1].replace(',', '.')
+load_average = os.getloadavg()[0]
 
-ps = subprocess.run(
-        shlex.split('cat /proc/cpuinfo'),
-        check=True,
-        capture_output=True,
-    )
-cores_number = subprocess.run(
-        shlex.split('grep -c processor'),
-        input=ps.stdout, 
-        capture_output=True)
-cores_number = int(cores_number.stdout.decode().strip())
+cores_number = os.cpu_count()
 
 load = float(load_average) / cores_number * 100
 
