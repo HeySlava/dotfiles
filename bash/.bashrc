@@ -7,7 +7,7 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
-HISTIGNORE="&:ls:[bf]g:exit:rm:cp:mv:pwd:clear:mount:umount:[ \t]*"
+# HISTIGNORE="&:ls:[bf]g:exit:rm:cp:mv:pwd:clear:mount:umount:[ \t]*"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -155,9 +155,9 @@ fkill() {
   fi
 }
 
-cpr() {
+rcp() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
 } 
-mvr() {
+rmv() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
 }
