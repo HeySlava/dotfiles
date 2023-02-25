@@ -54,7 +54,7 @@ return packer.startup(function(use)
     use 'honza/vim-snippets'
 
     -- Russian
-    use 'lyokha/vim-xkbswitch'
+    -- use 'lyokha/vim-xkbswitch'
 
     -- cmp
     use 'hrsh7th/cmp-nvim-lsp'
