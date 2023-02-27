@@ -109,8 +109,7 @@ alias pdf="lowriter --convert-to pdf"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
-alias notedir="pwd > /tmp/screenshot_local.config"
-alias venv="python -m venv /tmp/venv && . /tmp/venv/bin/activate && pip install pip -U setuptools wheel"
+alias venv="python -m venv --clear /tmp/venv && . /tmp/venv/bin/activate && pip install pip -U setuptools wheel"
 
 
 alias ls='ls -F'
