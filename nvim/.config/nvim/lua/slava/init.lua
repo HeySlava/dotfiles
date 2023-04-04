@@ -8,5 +8,10 @@ require('slava.markdown')
 
 vim.api.nvim_create_autocmd('BufEnter', {
     pattern = '*.py',
-    command = 'set colorcolumn=79'
+    command = 'set colorcolumn=88'
+})
+
+vim.api.nvim_create_autocmd('BufEnter', {
+    pattern = '*.arch',
+    command = 'UltiSnipsAddFiletypes arch'
 })
