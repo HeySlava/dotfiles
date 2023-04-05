@@ -109,7 +109,7 @@ alias pdf="lowriter --convert-to pdf"
 alias ssh='kitty +kitten ssh'
 alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
 alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
-alias venv="python -m venv --clear /tmp/venv && . /tmp/venv/bin/activate && pip install pip -U setuptools wheel"
+alias venv="source /home/slava/code/bash_scripts/create_venv.sh"
 
 
 alias ls='ls -F'
@@ -125,6 +125,8 @@ alias path="echo $PATH | tr : '\n'"
 alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-> ttl 65'"
 
 alias t="trans -indent 4 -d"
+
+alias code='nvim'
 
 
 bind 'set bell-style none'
