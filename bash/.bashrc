@@ -126,8 +126,6 @@ alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-
 
 alias t="trans -indent 4 -d"
 
-alias code='nvim'
-
 
 bind 'set bell-style none'
 
