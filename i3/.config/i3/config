@@ -3,6 +3,7 @@
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id telegram-desktop
 
+
 # keybinding to lock screen
 bindsym $mod+Control+l exec "i3lock -c 4D648D"
 # auto lock the screen
@@ -195,6 +196,7 @@ smart_gaps on
 # turn off default window's header
 # default_border normal 5
 for_window [class=".*"] border pixel 1
+smart_borders on
 
 # dropdown
 bindsym $mod+period exec --no-startup-id kitty --class dropdown -e ~/.new_session_tt $USER
@@ -202,14 +204,12 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 800 500; [instance="dropdown"] move position center
 
 
-# notes
-for_window [instance="notes"] floating enable
-for_window [instance="notes"] resize set 1200 700; [instance="notes"] move position center
+# dropdown-tg
 
-# show notes
-for_window [instance="show_notes"] resize set 1200 700; [instance="notes"] move position center
-# desable border for full screen
-smart_borders on
+bindsym $mod+i exec --no-startup-id kitty --class tg
+for_window [instance="tg"] floating enable
+for_window [instance="tg"] resize set 100 100; [instance="tg"] move position 1300 700
+
 
 # ЦВЕТ РАМОК 
 #                       Рамка   Фон     Text    Родительская_рамка
@@ -251,4 +251,4 @@ workspace_auto_back_and_forth yes
 bindsym $mod+shift+f floating toggle
 
 bindsym $mod+shift+u move scratchpad
-bindsym $mod+u [instance="^(?!dropdown)"] scratchpad show
+bindsym $mod+u scratchpad show
