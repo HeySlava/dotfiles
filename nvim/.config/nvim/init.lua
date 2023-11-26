@@ -1,1 +1,1 @@
-require('slava')
+require("slava")

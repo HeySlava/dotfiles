@@ -1,6 +1,1 @@
-local g = vim.g
-
-g.undotree_WindowLayout = 2
-g.undotree_DiffAutoOpen = 1
-g.undotree_SetFocusWhenToggle = 1
-g.undotree_ShortIndicators = 1
+vim.api.nvim_set_keymap('n', '<leader>u', ':UndotreeToggle<CR>', {noremap = true})

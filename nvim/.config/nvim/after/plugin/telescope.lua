@@ -1,3 +1,18 @@
+local map = vim.api.nvim_set_keymap
+
+
+local noremap = {noremap = true}
+--Telescope
+map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)
+map('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>', noremap)
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
+map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
+map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', noremap)
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', noremap)
+
+
+
 local actions = require('telescope.actions')
 
 require('telescope').setup {
@@ -11,7 +26,7 @@ require('telescope').setup {
   },
   defaults = {
     layout_config = {
-        width = 0.75,
+        width = 0.99,
         prompt_position = "top",
         preview_cutoff = 120, 
         horizontal = {mirror = false},

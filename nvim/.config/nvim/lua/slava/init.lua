@@ -1,6 +1,2 @@
-require('slava.packer-config')
-require('slava.telescope-config')
-require('slava.lsp-config')
-require('slava.settings')
-require('slava.mapping')
-require('slava.markdown')
+require("slava.set")
+require("slava.remap")
