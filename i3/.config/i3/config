@@ -9,6 +9,7 @@ bindsym $mod+Control+l exec "i3lock -c 4D648D"
 # auto lock the screen
 # exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 4D648D\""
 
+bindsym $mod+Control+s exec --no-startup-id systemctl suspend
 bindsym $mod+shift+p exec screenshot_server
 bindsym $mod+shift+g exec custom_gif
 
