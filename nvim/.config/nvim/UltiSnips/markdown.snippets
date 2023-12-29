@@ -1,0 +1,39 @@
+# images
+
+snippet "h([0-9]+)" "header" br
+`!p snip.rv = "#"*int(match.group(1))+ f" {snip.v.text.strip('#').strip()}"`$0
+endsnippet
+
+snippet img
+![alter text]($1)
+$0
+endsnippet
+
+
+snippet link "Link to something"
+[${VISUAL:Text}](${2:Put your frendly link here})$0
+endsnippet
+
+snippet code "code block"
+\`\`\`${1:bash}
+${0:${VISUAL}}
+\`\`\`
+endsnippet
+
+global !p
+def upper_right(inp):
+    return (75 - 2 * len(inp))*' ' + inp.upper()
+endglobal
+
+snippet wow
+${1:Text}`!p snip.rv = upper_right(t[1])`
+endsnippet
+
+snippet cb
+- [ ] $0
+endsnippet
+
+snippet q
+Your age: ${1|<18,18~60,>60|}
+Your height: ${2|<120cm,120cm~180cm,>180cm|}
+endsnippet
