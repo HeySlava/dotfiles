@@ -1,5 +1,6 @@
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
 local map = vim.api.nvim_set_keymap
-local default_opts = {noremap = true, silent = true}
 local noremap = {noremap = true}
 
 map('n', '<leader>pt', ':w !python3<CR>', noremap)
@@ -29,17 +30,8 @@ map('n', '<leader>sf', ':syntax off<cr>', noremap)
 
 map('n', '<leader>t', '<Plug>MarkdownPreviewToggle', noremap)
 
---Telescope
-map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)
-map('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>', noremap)
-map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
-map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
-map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
-
 map('i', '<F1>', '<Nop>', noremap)
 map('n', '<F1>', '<Nop>', noremap)
 
-map('n', '<leader>pv', ':Ex<CR>', noremap)
-map('n', '<leader>u', ':UndotreeToggle<CR>', noremap)
 
 -- map('n', '<C-f>', '<cmd>silent !tmux neww ns<CR>', noremap)
