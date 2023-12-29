@@ -1,23 +1,53 @@
 #!/usr/bin/python3
 
 
+
 import subprocess
+from typing import NamedTuple
 
-memory = subprocess.run(['df', '-h'], capture_output=True, text=True)
-memory = memory.stdout
-memory = memory.split('\n')[3]
 
-try:
-    swap = subprocess.run(
-            ['swapon', '--show'],
+class System(NamedTuple):
+    fs: str
+    size: str
+    used: str
+    avail: str
+    use_percent: str
+    mounted_on: str
+
+
+
+def get_gb(v: str) -> int:
+    return int(float(v.replace('G', '')))
+
+
+
+def main() -> int:
+
+    memory = subprocess.run(
+            ('df', '-h'),
             capture_output=True,
             text=True,
         )
-    swap = swap.stdout.split('\n')[1].split()[2].replace('G', '')
-    swap = int(swap)
-except FileNotFoundError:
-    swap = 0
-_, total, used, avail, _, _ = memory.replace('G', '').split()
-total = int(total)
-used = int(used)
-print(f"{used - swap}G/{total - swap}G")
+    memory = memory.stdout.strip().splitlines()
+    systems = [System(*s.strip().split()) for s in memory[1:]]
+    system = next((s for s in systems if s.mounted_on == '/'))
+
+    try:
+        swap = subprocess.run(
+                ['swapon', '--show'],
+                capture_output=True,
+                text=True,
+            )
+        swap = swap.stdout.split('\n')[1].split()[2].replace('G', '')
+        swap = int(float(swap.replace(',', '.')))
+    except FileNotFoundError:
+        swap = 0
+
+    total = get_gb(system.size)
+    used = get_gb(system.used)
+    print(f"{used - swap}G/{total - swap}G")
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
