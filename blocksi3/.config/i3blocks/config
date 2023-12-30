@@ -4,7 +4,7 @@ interval=1
 color=#C9E3DB
 
 [WEATER]
-command=curl wttr.in/~Russia+Tula?format=1
+command=curl wttr.in/~Russia+Tula?format=1 || echo 'curl is not installed'
 interval=600
 color=#C9E3DB
 
