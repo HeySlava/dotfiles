@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 import subprocess
 
 current_battery = subprocess.run(

@@ -3,7 +3,7 @@
 name: rksok
 root: ~/code/rksok
 
-pre_window: 
+pre_window:
   - . ~/.venv/rksok_venv/bin/activate
   - clear
 startup_window: editor

@@ -3,7 +3,7 @@
 name: epgu
 root: ~/code/epgu
 
-pre_window: 
+pre_window:
   - . ~/.venv/epgu_venv/bin/activate
   - . env.sh
   - clear

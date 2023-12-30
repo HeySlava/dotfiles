@@ -3,7 +3,7 @@
 name: todo
 root: ~/code/todo
 
-pre_window: 
+pre_window:
   - . ~/.venv/todo_venv/bin/activate
   - clear
 startup_window: editor

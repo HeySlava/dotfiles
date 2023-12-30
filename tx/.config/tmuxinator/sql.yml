@@ -3,7 +3,7 @@
 name: sql
 root: ~/code/stepic_sql
 
-pre_window: 
+pre_window:
   - clear
 startup_window: exam
 

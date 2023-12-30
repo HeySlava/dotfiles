@@ -3,7 +3,7 @@
 name: friends
 root: ~/code/friends
 
-pre_window: 
+pre_window:
   - . ~/.venv/friends_venv/bin/activate
   - . token_vk.sh
   - clear

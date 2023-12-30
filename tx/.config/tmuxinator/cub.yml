@@ -3,7 +3,7 @@
 name: cub
 root: ~/code/cube
 
-pre_window: 
+pre_window:
   - clear
 startup_window: editor
 
