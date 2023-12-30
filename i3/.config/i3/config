@@ -60,13 +60,13 @@ floating_minimum_size 300 x 300
 bindsym $mod+Return exec kitty
 
 # kill focused window
-# Just try, why not? 
+# Just try, why not?
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec --no-startup-id rofi -show run 
+bindsym $mod+d exec --no-startup-id rofi -show run
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -212,7 +212,7 @@ for_window [instance="tg"] floating enable
 for_window [instance="tg"] resize set 100 100; [instance="tg"] move position 1300 700
 
 
-# ЦВЕТ РАМОК 
+# ЦВЕТ РАМОК
 #                       Рамка   Фон     Text    Родительская_рамка
 client.focused			#00000 #d0e1f9 #1e1f26 #1c1b22
 client.focused_inactive	#00000 #1c1b22 #1c1b22 #1c1b22
@@ -223,7 +223,7 @@ client.placeholder		#00000 #1c1b22 #1c1b22 #1c1b22
 #	client.focused — окно в фокусе
 #	client.unfocused — окно вне фокуса
 #	client.focused_inactive — окно в фокусе но не активно
-#	client.urgent — окно требует внимания (всплывающее) 
+#	client.urgent — окно требует внимания (всплывающее)
 
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
 assign [class="(?i)google-chrome"] $ws1
@@ -237,7 +237,7 @@ assign [class="TrueConf"] $ws9
 assign [class="(?i)slack"] $ws10
 assign [class="TelegramDesktop"] $ws10
 
-# Нет фокуса при наведении мыши 
+# Нет фокуса при наведении мыши
 focus_follows_mouse no
 
 bindsym $mod+p exec flameshot gui

@@ -16,11 +16,11 @@ def time_search(pattern, string=snip.v.text):
 
 		if time_type.lower() == 'd':
 			return timedelta(days=int(num))
-		elif time_type.lower() == 'w': 
+		elif time_type.lower() == 'w':
 			return timedelta(weeks=int(num))
-		elif time_type.lower() == 'm': 
+		elif time_type.lower() == 'm':
 			return relativedelta(months=int(num))
-		elif time_type.lower() == 'y': 
+		elif time_type.lower() == 'y':
 			return relativedelta(years=int(num))
 	else:
 		return timedelta(days=0)
@@ -63,7 +63,7 @@ endsnippet
 snippet cub "update words" i
 update cub
 set word = '$1'
-where 
+where
   combo = '$2'
 ;
 endsnippet

@@ -97,7 +97,7 @@ fi
 
 
 # if [ $HOSTNAME == "desktop" ]
-# then 
+# then
 #     xmodmap ~/.dotfiles/bash/.Xmodmap
 # fi
 
@@ -156,7 +156,7 @@ fkill() {
 
 rcp() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
-} 
+}
 rmv() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
 }

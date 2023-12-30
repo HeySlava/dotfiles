@@ -28,7 +28,7 @@ require('telescope').setup {
     layout_config = {
         width = 0.99,
         prompt_position = "top",
-        preview_cutoff = 120, 
+        preview_cutoff = 120,
         horizontal = {mirror = false},
         vertical = {mirror = false}
     },
@@ -39,7 +39,7 @@ require('telescope').setup {
         'rg',
         '--no-heading',
         '--with-filename',
-        '--line-number', 
+        '--line-number',
         '--column',
         '--smart-case',
         '--hidden',
