@@ -130,13 +130,15 @@ alias t="trans -indent 4 -d"
 bind 'set bell-style none'
 
 
-export PATH=$PATH:$HOME/.python3.10.1/bin/
 export PATH=$PATH:$HOME/.local/bin/
 
 export EDITOR='nvim'
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
-export FZF_DEFAULT_COMMAND='rg --files'
+# export FZF_DEFAULT_COMMAND='rg --files'
+
+# need to work correctly in vm
+export LIBGL_ALWAYS_SOFTWARE=1
 
 
 setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
