@@ -133,10 +133,6 @@ bind 'set bell-style none'
 export PATH=$PATH:$HOME/.local/bin/
 export EDITOR='nvim'
 
-# need to work correctly in vm
-export LIBGL_ALWAYS_SOFTWARE=1
-
-
 setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
 setxkbmap -option ctrl:nocaps
 

@@ -57,7 +57,7 @@ floating_minimum_size 300 x 300
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec LIBGL_ALWAYS_SOFTWARE=true GALLIUM_DRIVER=llvmpipe kitty
 
 # kill focused window
 # Just try, why not?
