@@ -131,11 +131,7 @@ bind 'set bell-style none'
 
 
 export PATH=$PATH:$HOME/.local/bin/
-
 export EDITOR='nvim'
-export VIMCONFIG=$HOME/.config/nvim
-export VIMDATA=$HOME/.local/share/nvim
-# export FZF_DEFAULT_COMMAND='rg --files'
 
 # need to work correctly in vm
 export LIBGL_ALWAYS_SOFTWARE=1
