@@ -1,10 +1,18 @@
-#!/usr/bin/python3
+import pathlib
+
+
+power_supply = pathlib.Path('/sys/class/power_supply')
+bat_folders = (p for p in power_supply.glob('*') if p.name.startswith('BAT'))
 
 
 def _main() -> int:
 
-    with open('/sys/class/power_supply/BAT1/capacity') as f:
-        current_battery = int(f.read())
+    current_battery = -1
+    for b in bat_folders:
+        current_battery = int((b / 'capacity').read_text())
+        break
+    assert current_battery > -1
+
     if current_battery < 15:
         print(f'Current battery is: {current_battery} ')
         print('#ffffff')
