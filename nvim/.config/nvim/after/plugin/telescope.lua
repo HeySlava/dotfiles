@@ -1,17 +1,5 @@
 local map = vim.api.nvim_set_keymap
-
-
-local noremap = {noremap = true}
---Telescope
-map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)
-map('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>', noremap)
-map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
-map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
-map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
-map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', noremap)
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', noremap)
-
-
+local noremap = { noremap = true }
 
 local actions = require('telescope.actions')
 
@@ -37,14 +25,23 @@ require('telescope').setup {
                              '%.pdf', '%.gif' },
     find_command = {
         'rg',
-        '--no-heading',
-        '--with-filename',
-        '--line-number',
         '--column',
-        '--smart-case',
         '--hidden',
         '--ignore-file',
-        '-L'
+        '--line-number',
+        '--no-heading',
+        '--smart-case',
+        '--with-filename',
+        '-L',
+    },
+    vimgrep_arguments = {
+      "rg",
+      "--column",
+      "--hidden",
+      "--line-number",
+      "--no-heading",
+      "--smart-case",
+      "--with-filename",
     },
     entry_prefix = "  ",
     initial_mode = "insert",
@@ -130,5 +127,70 @@ require('telescope').setup {
     },
 },
 }
+
+
+local builtin = require('telescope.builtin')
+
+local function is_git_repo()
+  vim.fn.system("git rev-parse --is-inside-work-tree")
+  return vim.v.shell_error == 0
+end
+
+local function get_git_root()
+  local dot_git_path = vim.fn.finddir(".git", ".;")
+  return vim.fn.fnamemodify(dot_git_path, ":h")
+end
+
+
+local default = {
+    hidden = true,
+}
+
+
+local find_files_from_project_git_root = function()
+  local modified_default = {}
+
+  for k, v in pairs(default) do
+    modified_default[k] = v
+  end
+
+	if is_git_repo() then
+        modified_default['cwd'] = get_git_root()
+	end
+  builtin.find_files(modified_default)
+end
+
+
+local live_grep_from_project_git_root = function()
+  local modified_default = {}
+
+  for k, v in pairs(default) do
+    modified_default[k] = v
+  end
+
+	if is_git_repo() then
+        modified_default['cwd'] = get_git_root()
+	end
+	builtin.live_grep(modified_default)
+end
+
+
+local get_dot_files = function ()
+    builtin.find_files({ cwd = '~/.dotfiles', hidden = true,})
+end
+
+-- Telescope
+-- map('n', '<leader>ff', '<cmd>lua vim.find_files_from_project_git_root()<cr>', noremap)
+vim.keymap.set('n', '<leader>ff', find_files_from_project_git_root, {})
+vim.keymap.set('n', '<leader>fn', get_dot_files, {})
+-- map('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.dotfiles/ find_command=rg,--hidden,-L,--files<cr>', noremap)
+vim.keymap.set('n', '<leader>fg', live_grep_from_project_git_root, noremap)
+map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
+map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', noremap)
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', noremap)
+
+
+
 
 require('telescope').load_extension('fzf')
