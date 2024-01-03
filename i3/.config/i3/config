@@ -60,12 +60,8 @@ floating_minimum_size 300 x 300
 bindsym $mod+Return exec LIBGL_ALWAYS_SOFTWARE=true GALLIUM_DRIVER=llvmpipe kitty
 
 # kill focused window
-# Just try, why not?
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
 bindsym $mod+d exec --no-startup-id rofi -show run
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
