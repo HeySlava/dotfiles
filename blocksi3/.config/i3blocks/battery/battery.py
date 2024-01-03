@@ -1,16 +1,14 @@
 import pathlib
 
 
-power_supply = pathlib.Path('/sys/class/power_supply')
-bat_folders = (p for p in power_supply.glob('*') if p.name.startswith('BAT'))
-
-
 def _main() -> int:
 
-    current_battery = -1
-    for b in bat_folders:
-        current_battery = int((b / 'capacity').read_text())
-        break
+    power_supply = pathlib.Path('/sys/class/power_supply')
+    bat_folder = next(
+            p for p in power_supply.glob('*') if p.name.startswith('BAT')
+        )
+
+    current_battery = int((bat_folder / 'capacity').read_text())
     assert current_battery > -1
 
     if current_battery < 15:
