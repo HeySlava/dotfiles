@@ -47,3 +47,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*.git/COMMIT_EDITMSG",
     command = "set colorcolumn=50,72"
 })
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+  pattern = {"*docker-compose*"},
+  command = "set filetype=yaml.docker-compose",
+})

@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
 
+  -- Autodetect ansible type
+  use 'pearofducks/ansible-vim'
+
 use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v2.x',
