@@ -131,6 +131,7 @@ bind 'set bell-style none'
 
 
 export PATH=$PATH:$HOME/.local/bin/
+export PATH=/opt/node-v20.10.0-linux-x64/bin:$PATH
 export EDITOR='nvim'
 
 setxkbmap "us,ru" ",winkeys" "grp:lwin_toggle"
