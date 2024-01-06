@@ -3,7 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'pyright', 'lua_ls',
+  'pyright', 'lua_ls', 'ansiblels', 'docker_compose_language_service', 'dockerls',
 })
 
 -- Fix Undefined global 'vim'
