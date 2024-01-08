@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
   use 'honza/vim-snippets'
 
   -- Autodetect ansible type
-  use 'pearofducks/ansible-vim'
+  -- use 'pearofducks/ansible-vim'
 
 use {
   'VonHeikemen/lsp-zero.nvim',
