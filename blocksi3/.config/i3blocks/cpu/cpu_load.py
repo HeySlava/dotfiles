@@ -7,13 +7,15 @@ import subprocess
 def _get_load() -> float:
     load_average = os.getloadavg()[0]
     cores_number = os.cpu_count()
+    if not load_average or not cores_number:
+        raise ValueError("I can't calculate load average")
     load = float(load_average) / cores_number * 100
     return load
 
 
 def _get_temp() -> str | None:
     try:
-        command= subprocess.run(
+        command = subprocess.run(
                 'sensors',
                 capture_output=True,
                 text=True,
@@ -48,6 +50,7 @@ def main() -> int:
     except Exception as e:
         print(f'{e.__class__.__name__}: {e}')
         return 1
+
 
 if __name__ == '__main__':
     main()

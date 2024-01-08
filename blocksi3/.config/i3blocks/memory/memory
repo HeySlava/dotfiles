@@ -12,10 +12,8 @@ class System(NamedTuple):
     mounted_on: str
 
 
-
 def get_gb(v: str) -> int:
     return int(float(v.replace('G', '')))
-
 
 
 def main() -> int:
@@ -25,8 +23,8 @@ def main() -> int:
             capture_output=True,
             text=True,
         )
-    memory = memory.stdout.strip().splitlines()
-    systems = [System(*s.strip().split()) for s in memory[1:]]
+    memory_l = memory.stdout.strip().splitlines()
+    systems = [System(*s.strip().split()) for s in memory_l[1:]]
     system = next((s for s in systems if s.mounted_on == '/'))
 
     try:
@@ -35,14 +33,14 @@ def main() -> int:
                 capture_output=True,
                 text=True,
             )
-        swap = swap.stdout.split('\n')[1].split()[2].replace('G', '')
-        swap = int(float(swap.replace(',', '.')))
+        swap_str = swap.stdout.split('\n')[1].split()[2].replace('G', '')
+        swap_value = int(float(swap_str.replace(',', '.')))
     except FileNotFoundError:
-        swap = 0
+        swap_value = 0
 
     total = get_gb(system.size)
     used = get_gb(system.used)
-    print(f"{used - swap}G/{total - swap}G")
+    print(f"{used - swap_value}G/{total - swap_value}G")
     return 0
 
 
