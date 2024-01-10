@@ -53,30 +53,26 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
   command = "set filetype=yaml.docker-compose",
 })
 
--- TODO: rewrite with regex
 vim.api.nvim_create_autocmd({"BufEnter", "BufWrite"}, {
     callback = function ()
         vim.schedule(function ()
             local filename = vim.fn.expand('%:p')
-            local match = false
-            local extension = string.match(filename, "%.(%w+)$")
-            local extensions = {'yaml', 'yml'}
+            local pat = {
+                '.*vars.*%.ya?ml',
+                '.*tasks.*%.ya?ml',
+                '.*roles.*%.ya?ml',
+                '.*handlers.*%.ya?ml',
+                '.*playbook.*%.ya?ml',
+                'site%.ya?ml',
+                'local%.ya?ml',
+                'main%.ya?ml',
+                'requirements%.ya?ml',
+            }
 
-            for i = 1, #extensions do
-                if extensions[i] == extension then
-                    match = true
+            for i = 1, #pat do
+                if string.find(filename, pat[i]) then
+                    vim.bo.filetype = 'yaml.ansible'
                     break
-                end
-            end
-
-            -- local pat = '(vars|tasks|roles|handlers|playbook|site|main|local|requirements)+.*%.ya?ml'
-            local pat = {'vars', 'tasks', 'roles', 'handlers', 'playbook', 'site', 'main', 'local', 'requirements'}
-            if match then
-                for i = 1, #pat do
-                    if string.find(filename, pat[i]) then
-                        vim.bo.filetype = 'yaml.ansible'
-                        break
-                    end
                 end
             end
         end)
