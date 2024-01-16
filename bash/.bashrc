@@ -101,8 +101,8 @@ fi
 #     xmodmap ~/.dotfiles/bash/.Xmodmap
 # fi
 
-alias pt="python3.10"
-alias python="python3.10"
+alias pt="python3.12"
+alias python="python3.12"
 alias tx="tmuxinator"
 alias ns="source ~/.new_session_tt"
 alias pdf="lowriter --convert-to pdf"
