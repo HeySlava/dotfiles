@@ -8,6 +8,10 @@ command=curl wttr.in/~Armenia+Yerevan?format=1 || echo 'problems with WEATER blo
 interval=600
 color=#C9E3DB
 
+[WORK_VPN]
+command=python3 ~/.config/i3blocks/work_vpn.py
+interval=1
+
 [DOCKER]
 command=echo "$(docker ps -q | wc -l) DC"
 interval=1
