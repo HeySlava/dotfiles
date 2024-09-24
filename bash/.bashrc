@@ -107,8 +107,8 @@ alias tx="tmuxinator"
 alias ns="source ~/.new_session_tt"
 alias pdf="lowriter --convert-to pdf"
 alias ssh='kitty +kitten ssh'
-alias airn="bluetoothctl connect 20:74:CF:47:49:6A"
-alias airff="bluetoothctl disconnect 20:74:CF:47:49:6A"
+alias airn="bluetoothctl connect C0:86:B3:DF:F8:59"
+alias airff="bluetoothctl disconnect C0:86:B3:DF:F8:59"
 alias venv="source /home/slava/code/bash_scripts/create_venv.sh"
 
 
